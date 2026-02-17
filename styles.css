@@ -1,0 +1,136 @@
+*{
+    font-family: "NS Sans", sans-serif;
+}
+
+:root{
+    --primary-color: #E6E6E9;
+    --secondary-color: #fff;
+    --text-color: #0063d3;
+    --header-color: #003082;
+    --NS-geel: #ffc917;
+}
+
+body{
+    background-color: var(--primary-color);
+    margin: 2vw;
+}
+
+header {
+    background-color: var(--NS-geel);
+    padding: 5vw;
+    border-radius: 8px;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+header p{
+    font-size: 5vw;
+    font-weight: bold;
+}
+
+.groep{
+    background-color: var(--secondary-color);
+    margin: 5vw 0vw;
+    padding: 2vw 2vw;
+}
+
+.groep > fieldset{
+    margin: 0vw;
+    padding: 2vw 0vw;
+}
+
+.titel{
+    color: var(--header-color);
+    font-size: 2em;
+    font-weight: 1000;
+    padding: 0vw;
+    margin: 0vw;
+}
+
+fieldset{
+    border: none;
+    padding: 0vw;
+    margin: 0vw;
+}
+
+p{
+    font-size: 1.5vw;
+    margin: 0.5vw;
+}
+
+#groepvragen {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2em;
+}
+
+/* label/legend en input styling */
+.kopje{
+    color: var(--text-color);
+    font-size: 18px;
+}
+
+label{
+    color: var(--text-color);
+    font-size: 18px;
+}
+
+input{
+    margin-bottom: 5vw;
+}
+
+input[type="text"], 
+input[type="number"],
+input[type="date"],
+input[type="email"]{
+    height: 10vw;
+    border-radius: 8px;
+}
+
+/* bron: https://stackoverflow.com/questions/51945122/how-to-change-the-appearance-of-input-type-date-datepicker */
+input[type="date"]::-webkit-calendar-picker-indicator {
+    transform: scale(2);
+    margin-right: 1em;
+}
+
+/* stylen radio buttons */
+input[type="radio"] {
+    display: none;
+}
+
+input[type="radio"] + label {
+    color: black;
+    border: solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1em;
+    height: 15vw;
+    border-radius: 8px;
+
+    cursor: pointer;
+}
+
+input[type="radio"]:checked + label {
+    color: var(--NS-geel);
+    font-weight: 600;
+    border-color: #ffc917;
+}
+
+/* submit button styling */
+
+button[type="submit"] {
+    background-color: var(--NS-geel);
+    color: black;
+    border: none;
+    padding: 1em 2em;
+    border-radius: 8px;
+    font-size: 1.5vw;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #e6b800; /* Darker yellow on hover */
+}

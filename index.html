@@ -5,144 +5,166 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Belasting</title>
     <link rel="stylesheet" href="styles.css">
+    <script defer src="main.js"></script>
+    <link rel="stylesheet" href="https://static-ns-nl-data.fep-p.cla.ns.nl/apps/nessie/fonts/1.0.1/fonts.css" />
 </head>
 <body>
-    <header></header>
+    <header>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M10.7159 9.21997H13.2853V15.9381H10.7159V9.21997ZM10.7146 17.2818H13.284V19.969H10.7146V17.2818Z" fill="#FF0000"/>
+            <path d="M14.2707 1.42694C13.8236 0.546858 12.9526 0 11.9994 0C11.0461 0 10.1751 0.546859 9.728 1.42828L0.300835 20.0551C0.0921401 20.4643 -0.0112007 20.9232 0.000962066 21.3868C0.0131249 21.8504 0.140373 22.3027 0.370209 22.6993C0.596827 23.0979 0.919128 23.4276 1.30515 23.6558C1.69118 23.8839 2.12752 24.0026 2.57091 24H21.4278C22.3374 24 23.1609 23.5136 23.6298 22.6993C23.8596 22.3027 23.9869 21.8504 23.999 21.3868C24.0112 20.9232 23.9079 20.4643 23.6992 20.0551L14.2707 1.42694ZM2.57091 21.3127L11.9994 2.68592L21.4342 21.3127H2.57091Z" fill="#FF0000"/>
+        </svg>
+
+        <p>Dit is een school project</p>
+
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M10.7159 9.21997H13.2853V15.9381H10.7159V9.21997ZM10.7146 17.2818H13.284V19.969H10.7146V17.2818Z" fill="#FF0000"/>
+            <path d="M14.2707 1.42694C13.8236 0.546858 12.9526 0 11.9994 0C11.0461 0 10.1751 0.546859 9.728 1.42828L0.300835 20.0551C0.0921401 20.4643 -0.0112007 20.9232 0.000962066 21.3868C0.0131249 21.8504 0.140373 22.3027 0.370209 22.6993C0.596827 23.0979 0.919128 23.4276 1.30515 23.6558C1.69118 23.8839 2.12752 24.0026 2.57091 24H21.4278C22.3374 24 23.1609 23.5136 23.6298 22.6993C23.8596 22.3027 23.9869 21.8504 23.999 21.3868C24.0112 20.9232 23.9079 20.4643 23.6992 20.0551L14.2707 1.42694ZM2.57091 21.3127L11.9994 2.68592L21.4342 21.3127H2.57091Z" fill="#FF0000"/>
+        </svg>
+    </header>
     <main>
         <form action="">
-            <h1>Gegevens van de overledene</h1>
+            <div class="groep">
+                <fieldset id="groepvragen">
+                    <!-- <h1>Gegevens van de overledene</h1> -->
 
-            <fieldset>
-                <legend>1A: Vul hier de gegevens in van de overledene.</legend>
+                    <legend class="titel">Gegevens van de overledene</legend>
 
-                    <label for="Voorletters">Voorletters</label>
-                    <input type="text" id="Voorletters" required >
+                        <label for="Voorletters">Voorletters</label>
+                        <input type="text" id="Voorletters" required >
 
-                    <label for="Tussenvoegsels">Tussenvoegsels</label>
-                    <input type="text" id="Tussenvoegsels" required >
+                        <label for="Tussenvoegsels">Tussenvoegsels</label>
+                        <input type="text" id="Tussenvoegsels" required >
 
-                    <label for="Achternaam">Achternaam</label>
-                    <input type="text"  id="Achternaam" required >
+                        <label for="Achternaam">Achternaam</label>
+                        <input type="text"  id="Achternaam" required >
 
-                    <label for="Bsn overledene">Bsn overledene</label>
-                    <input type="number" id="Bsn overledene" minlength="9" maxlength="9" required >
+                        <label for="Bsn overledene">Bsn overledene</label>
+                        <input type="number" id="Bsn overledene" minlength="9" maxlength="9" required >
 
-                    <label for="Overlijdensdatum">Overlijdensdatum</label>
-                    <input type="date" id="Overlijdensdatum" required >
-            </fieldset>
-
+                        <label for="Overlijdensdatum">Overlijdensdatum</label>
+                        <input type="date" id="Overlijdensdatum" required >
+                </fieldset>
+            </div>
             <!-- Progressive disclosure -->
 
-            <fieldset>
-                <legend>1B</legend>
+            <div class="groep">
+                <fieldset id="groepvragen">
+                    <legend class="titel">Burgerlijke staat en huwelijksvoorwaarden</legend>
 
-                <fieldset>
-                    <legend>Was de overledene getrouwd of had de overledene een geregistreerde partner op het moment van overlijden?</legend>
-                    
-                    <label for="getrouwdnee">Nee. Ga verder met vraag 1c.</label>
-                    <input type="radio" name="getrouwd" id="getrouwdnee">
+                    <fieldset  id="groepvragen">
+                        <legend class="kopje">Was de overledene getrouwd of had de overledene een geregistreerde partner op het moment van overlijden?</legend>
+                        
+                        <input type="radio" name="getrouwd" id="getrouwdnee" required>
+                        <label for="getrouwdnee">Nee</label>
 
-                    <label for="getrouwdja">Ja</label>
-                    <input type="radio" name="getrouwd" id="getrouwdja">
-                </fieldset>
+                        <input type="radio" name="getrouwd" id="getrouwdja" required>
+                        <label for="getrouwdja">Ja</label>
+                    </fieldset>
 
-                <fieldset>
-                    <legend>Hadden de overledene en diens echtgenoot of geregistreerde partner huwelijkse of partnerschapsvoorwaarden laten vastleggen in een notariële akte?</legend>
-                    
-                    <label for="notariële aktenee">Nee. Ga verder met vraag 1c.</label>
-                    <input type="radio" name="notariële akte" id="notariële aktenee">
-                    
-                    <label for="notariële akte">Ja. Stuur een kopie van de akte mee met de aangifte.</label>
-                    <input type="radio" name="notariële akte" id="notariële akteja">
-                </fieldset>
+                    <fieldset  id="groepvragen">
+                        <legend class="kopje">Hadden de overledene en diens echtgenoot of geregistreerde partner huwelijkse of partnerschapsvoorwaarden laten vastleggen in een notariële akte?</legend>
+                        
+                        <input type="radio" name="notariële akte" id="notariële aktenee" required>
+                        <label for="notariële aktenee">Nee</label>
+                        
+                        <input type="radio" name="notariële akte" id="notariële akteja">
+                        <label for="notariële akteja">Ja. Stuur een kopie van de akte mee met de aangifte.</label>
+                    </fieldset>
 
-                <fieldset>
-                    <legend>Hadden de overledene en diens partner een finaal verrekenbeding?</legend>
+                    <fieldset  id="groepvragen">
+                        <legend class="kopje">Hadden de overledene en diens partner een finaal verrekenbeding?</legend>
 
-                    <label for="verrekenbedingnee">Nee</label>
-                    <input type="radio" name="verrekenbeding" id="verrekenbedingnee">
+                        <input type="radio" name="verrekenbeding" id="verrekenbedingnee">
+                        <label for="verrekenbedingnee">Nee</label>
 
-                    <label for="verrekenbedingneeja">Ja</label>
-                    <input type="radio" name="verrekenbeding" id="verrekenbedingja">
-                </fieldset>
+                        <input type="radio" name="verrekenbeding" id="verrekenbedingja">
+                        <label for="verrekenbedingja">Ja</label>
+                    </fieldset>
 
-                    <legend>Datum huwelijkse of partnerschapsvoorwaarden</legend>
 
-                    <label for="datumvoorwaarden">Datum</label>
+                    <label for="datumvoorwaarden">Datum huwelijkse of partnerschapsvoorwaarden</label>
                     <input type="date" id="datumvoorwaarden">
 
+                </fieldset>
+            </div>
+
+            <div class="groep">
+                <fieldset id="groepvragen">
+                    <legend class="titel">Kinderen en afstammelingen</legend>
+                    <fieldset  id="groepvragen">
+                        <legend class="kopje">Had de overledene kinderen?</legend>
+
+                        <input type="radio" name="kinderen" id="kinderennee">
+                        <label for="kinderennee">Nee</label>
+
+                        <input type="radio" name="kinderen" id="kinderenja">
+                        <label for="kinderenja">Ja</label>
+                    </fieldset>
+
+                    <fieldset  id="groepvragen">
+                        <legend class="kopje">Is 1 van deze kinderen eerder overleden dan de overledene voor wie u nu aangifte doet?</legend>
+                        
+                        <input type="radio" name="kindoverleden" id="kindoverledennee">
+                        <label for="kindoverledennee">Nee</label>
+
+                        <input type="radio" name="kindoverleden" id="kindoverledenja">
+                        <label for="kindoverledenja">Ja</label>
+                    </fieldset>
+
+                    <fieldset  id="groepvragen">
+                        <legend class="kopje">Had dit overleden kind zelf kinderen?</legend>
+
+                        <input type="radio" name="hadkinderen" id="hadkindkinderennee">
+                        <label for="hadkindkinderennee">Nee</label>
+
+                        <input type="radio" name="hadkinderen" id="hadkindkinderenja">
+                        <label for="hadkindkinderenja">Ja</label>
+                    </fieldset>
+                </fieldset>
+            </div>
+
+            <div class="groep">
+                <fieldset id="groepvragen">
+                    <legend class="titel">Testament</legend>
+                    <fieldset id="groepvragen">
+                        <legend class="kopje">Had de overledene een testament?</legend>
+
+                        <input type="radio" name="testament" id="testamentnee">
+                        <label for="testamentnee">Nee</label>
+                        
+                        <input type="radio" name="testament" id="testamentja">
+                        <label for="testamentja">Ja</label>
+                    </fieldset>
+
+                    <fieldset id="groepvragen">
+                        <label for="Protocolnummernotaris">Protocolnummer notaris</label>
+                        <input type="number" id="Protocolnummernotaris" required >
+
+                        <label for="Voorlettersnotaris">Voorletters</label>
+                        <input type="text" id="Voorletters" required >
+
+                        <label for="Tussenvoegselsnotaris">Tussenvoegsels</label>
+                        <input type="text" id="Tussenvoegsels" required >
+
+                        <label for="Achternaamnotaris">Achternaam</label>
+                        <input type="text"  id="Achternaam" required >
+
+                        <label for="Vestigingsplaats">Vestigingsplaats</label>
+                        <input type="text" id="Vestigingsplaats" autocomplete="address-level2">
+
+                        <label for="datumtestament">Datum van het testament of van de laatste wijziging</label>
+                        <input type="date" id="datumtestament">
+
+                        <label for="bsnoverledene">Vul hier het bsn van de overledene in.</label>
+                        <input type="number" id="bsnoverledene">
+                    </fieldset>
+                </div>
+
             </fieldset>
 
-            <fieldset>
-                <legend>1C</legend>
-                <fieldset>
-                    <legend>Had de overledene kinderen?</legend>
-
-                    <label for="kinderennee">Nee. Ga verder met vraag 1d.</label>
-                    <input type="radio" name="kinderen" id="kinderennee">
-
-                    <label for="kinderenja">Ja</label>
-                    <input type="radio" name="kinderen" id="kinderenja">
-                </fieldset>
-
-                <fieldset>
-                    <legend>Is 1 van deze kinderen eerder overleden dan de overledene voor wie u nu aangifte doet?</legend>
-                    
-                    <label for="kindoverledennee"></label>
-                    <input type="radio" name="kindoverleden" id="kindoverledennee">
-
-                    <label for="kindoverledenja">Ja</label>
-                    <input type="radio" name="kindoverleden" id="kindoverledenja">
-                </fieldset>
-
-                <fieldset>
-                    <legend>Had dit overleden kind zelf kinderen?</legend>
-
-                    <label for="hadkindkinderennee">Nee</label>
-                    <input type="radio" name="hadkinderen" id="hadkindkinderennee">
-
-                    <label for="hadkindkinderenja">Ja</label>
-                    <input type="radio" name="hadkindkinderen" id="hadkindkinderenja">
-                </fieldset>
-            </fieldset>
-
-            <fieldset>
-                <legend>1D</legend>
-                <fieldset>
-                    <legend>Had de overledene een testament?</legend>
-
-                    <label for="testamentnee">Nee. Ga verder met vraag 2.</label>
-                    <input type="radio" name="testament" id="testamentnee">
-
-                    <label for="testamentja">Ja. Vul de gegevens in van de notaris die het testament heeft opgemaakt en de datum van het testament.</label>
-                    <input type="radio" name="testament" id="testamentja">
-                </fieldset>
-
-                <label for="Protocolnummer notaris">Protocolnummer notaris</label>
-                <input type="number" id="Protocolnummer notaris" required >
-
-                <fieldset>
-                    <legend>Notaris gegevens</legend>
-                    <label for="Voorlettersnotaris">Voorletters</label>
-                    <input type="text" id="Voorletters" required >
-
-                    <label for="Tussenvoegselsnotaris">Tussenvoegsels</label>
-                    <input type="text" id="Tussenvoegsels" required >
-
-                    <label for="Achternaamnotaris">Achternaam</label>
-                    <input type="text"  id="Achternaam" required >
-
-                    <label for="Vestigingsplaats">Vestigingsplaats</label>
-                    <input type="text" id="Vestigingsplaats" autocomplete="address-level2">
-
-                    <label for="datumtestament">Datum van het testament of van de laatste wijziging</label>
-                    <input type="date" id="datumtestament">
-
-                    <label for="bsnoverledene">Vul hier het bsn van de overledene in.</label>
-                    <input type="number" id="bsnoverledene">
-                </fieldset>
-
-            </fieldset>
+            <button type="submit">Aangifte indienen</button>
+            
         </form>
     </main>
     <footer></footer>
