@@ -21,3 +21,19 @@ Morgen wil ik beginnen met het stylen van mijn formulier aan de hand van de NS h
 ## Weekly geek
 **Article**
 
+**wooclap**
+
+## Week 1/ Dag 2
+
+**Wat heb ik vandaag gedaan:**
+Vandaag heb ik de kickof bijgewoond. Tijdens de kickoff hebben we een wooclap gedaan over de artikel die gaat over tahoe icons. Na de kickoff ben ik bezig geweest met het stylen van de eerste pattern van mijn formulier. 
+
+**Hoelang duurde het:**
+
+
+**Wat heb ik geleerd:**
+
+
+**Wat ga ik morgen doen:**
+
+
