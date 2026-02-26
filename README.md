@@ -1,4 +1,4 @@
-# Sprint 1
+# Sprint 2
 ## Week 1/ Dag 1
 
 **Wat heb ik vandaag gedaan:**
