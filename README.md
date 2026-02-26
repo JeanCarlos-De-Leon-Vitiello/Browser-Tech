@@ -28,19 +28,29 @@ Er was wel een punt in het article waar ik het zelf niet helemaal mee eens was e
 ![figma-ontwerp](./Image/Scherm­afbeelding%202026-02-19%20om%2015.20.50.png)
 
 **wooclap**
-Ik vond de wooclap interessant omdat klasgenoten 
+Tijdens de wooclap vond ik het vooral interessant wat de meningen van de anderen studenten was van wat er in de artikel stond. 
 
 ## Week 1/ Dag 2
 
 **Wat heb ik vandaag gedaan:**
-Vandaag heb ik de kickof bijgewoond. Tijdens de kickoff hebben we een wooclap gedaan over de artikel die gaat over tahoe icons. Na de kickoff ben ik bezig geweest met het stylen van de eerste pattern van mijn formulier. 
+Vandaag heb ik de kickof bijgewoond. Tijdens de kickoff hebben we een wooclap gedaan over de artikel die gaat over tahoe icons. Na de kickoff ben ik bezig geweest met het stylen van de eerste pattern van mijn formulier. Ik merkte dat het al heel snel on overzichtelijk kan woorden wanneer je bezig bent het het maken van een formulier, Vooral met zo een complexe formulier als die van de belasting dienst. Doordat ik steeds dezelfde elementen aan het gebruiken was, raakte ik snel in de waar. Het is mij uiteindelijk wel gelukt om alle html erin te krijgen.
 
 **Hoelang duurde het:**
-
+Het duurde ongeveer 3 uurtjes om alle html van de eerste pattern goed erin te krijgen
 
 **Wat heb ik geleerd:**
-
+Ik heb geleerd dat het heel lastig is om een legend te stylen. Het staat namelijk half binnen en buiten een fieldset. Uiteindelijk heb ik een div kunnen gebruiken om het te laten lijken alsof het binnen een fieldset staat.
 
 **Wat ga ik morgen doen:**
+Morgen ga ik starten aan het nieuwe vak die gaat over CSS, dus morgen ga ik hier niks aan doen. Wat ik wel wil gaan doen is het verzamelen van feedback op de vrijdag om te kijken of er verbeteringen aan mijn werk aangebracht kan worden.
 
+**Vrijdag Feedback Sessie: 1**
+Tijdens de feedback sessie heb ik mijn werk laten zien aan andere studenten en kunnen zien wat andere studenten hebben gemaakt. Tijdens de feedback heb ik het volgende als feedback gekregen:
+
+- Gebruik geen white space bij namen, id of andere attributes
+- Het is beter om in het engels te coderen omdat de industry dat als hoofd taal heeft
+- Denk aan de with van je elementen en gebruik % inplaats van em.
+- Input voor een bsn of datum is niet zo lang dus maak de input korter.
+
+Ik heb ook het werk van andere gezien wat ook heel interessant is. Bij de datum input had ik gezien dat mila bijvoorbeeld daar 3 inputs van had gemaakt om zo de datum te selecteren. Maar uit de feeback bleek dat dat niet een heel goed idee was omdat het heel ingewikkeld is om het te laten werken want niet alle maanden hebben 31 dagen.
 
