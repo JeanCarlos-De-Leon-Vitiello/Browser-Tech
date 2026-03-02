@@ -8,10 +8,11 @@
     --text-color: #0063d3;
     --header-color: #003082;
     --NS-geel: #ffc917;
+    --NS-background: #ffffff;
 }
 
 body{
-    background-color: var(--primary-color);
+    background-color: var(--NS-background);
     margin: 2vw;
 }
 
@@ -39,10 +40,6 @@ header p{
     padding: 2vw 2vw;
 }
 
-.groep > fieldset{
-    margin: 0vw;
-    padding: 2vw 0vw;
-}
 
 .titel{
     color: var(--header-color);
@@ -151,16 +148,3 @@ button[type="submit"]:hover {
     background-color: #e6b800; /* Darker yellow on hover */
 }
 
-/* progressive disclosure */
-/* divs hidden */
-.groep-kinderen-afstammelingen, .notariele-akte-vraag, .verrekenbeding-vraag, .groep-testament {
-    display: none;
-}
-
-.groep-burgerlijke-staat:has(input[value="nee"]:checked) + .groep-kinderen-afstammelingen{
-    display: block;
-}
-
-.getrouwd-vraag:has(input[value="ja"]:checked) ~ .notariele-akte-vraag{
-    display: block;
-}

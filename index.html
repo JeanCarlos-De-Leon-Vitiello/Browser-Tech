@@ -24,8 +24,7 @@
     </header>
     <main>
         <form action="">
-            <div class="groep groep-overledene">
-                <fieldset class="overledene-gegevens">
+            <fieldset class="groep groep-overledene overledene-gegevens">
                     <!-- <h1>Gegevens van de overledene</h1> -->
 
                     <legend class="titel">Gegevens van de overledene</legend>
@@ -45,11 +44,9 @@
                         <label for="Overlijdensdatum">Overlijdensdatum</label>
                         <input type="date" id="Overlijdensdatum" required >
                 </fieldset>
-            </div>
             <!-- Progressive disclosure -->
 
-            <div class="groep groep-burgerlijke-staat">
-                <fieldset class="burgerlijke-staat">
+            <fieldset class="groep groep-burgerlijke-staat burgerlijke-staat">
                     <legend class="titel">Burgerlijke staat en huwelijksvoorwaarden</legend>
 
                     <fieldset class="getrouwd-vraag">
@@ -65,11 +62,11 @@
                     <fieldset class="notariele-akte-vraag">
                         <legend class="kopje">Hadden de overledene en diens echtgenoot of geregistreerde partner huwelijkse of partnerschapsvoorwaarden laten vastleggen in een notariële akte?</legend>
                         
-                        <input type="radio" name="notariële akte" id="notariële aktenee" required>
-                        <label for="notariële aktenee">Nee</label>
+                        <input type="radio" name="notariëleakte" id="notariëleaktenee" required>
+                        <label for="notariëleaktenee">Nee</label>
                         
-                        <input type="radio" name="notariële akte" id="notariële akteja">
-                        <label for="notariële akteja">Ja. Stuur een kopie van de akte mee met de aangifte.</label>
+                        <input type="radio" name="notariëleakte" id="notariëleakteja">
+                        <label for="notariëleakteja">Ja. Stuur een kopie van de akte mee met de aangifte.</label>
                     </fieldset>
 
                     <fieldset class="verrekenbeding-vraag">
@@ -86,10 +83,9 @@
                     </fieldset>
 
                 </fieldset>
-            </div>
+            
 
-            <div class="groep groep-kinderen-afstammelingen">
-                <fieldset class="kinderen-afstammelingen">
+            <fieldset class="groep groep-kinderen-afstammelingen kinderen-afstammelingen">
                     <legend class="titel">Kinderen en afstammelingen</legend>
                     <fieldset class="kinderen-vraag">
                         <legend class="kopje">Had de overledene kinderen?</legend>
@@ -121,10 +117,9 @@
                         <label for="hadkindkinderenja">Ja</label>
                     </fieldset>
                 </fieldset>
-            </div>
+            
 
-            <div class="groep groep-testament">
-                <fieldset class="testament">
+            <fieldset class="groep groep-testament testament">
                     <legend class="titel">Testament</legend>
                     <fieldset class="testament-vraag">
                         <legend class="kopje">Had de overledene een testament?</legend>
@@ -158,7 +153,7 @@
                         <label for="bsnoverledene">Vul hier het bsn van de overledene in.</label>
                         <input type="number" id="bsnoverledene">
                     </fieldset>
-                </div>
+            
 
             </fieldset>
 
