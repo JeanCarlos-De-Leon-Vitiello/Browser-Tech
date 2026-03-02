@@ -24,8 +24,8 @@
     </header>
     <main>
         <form action="">
-            <div class="groep">
-                <fieldset id="groepvragen">
+            <div class="groep groep-overledene">
+                <fieldset class="overledene-gegevens">
                     <!-- <h1>Gegevens van de overledene</h1> -->
 
                     <legend class="titel">Gegevens van de overledene</legend>
@@ -48,21 +48,21 @@
             </div>
             <!-- Progressive disclosure -->
 
-            <div class="groep">
-                <fieldset id="groepvragen">
+            <div class="groep groep-burgerlijke-staat">
+                <fieldset class="burgerlijke-staat">
                     <legend class="titel">Burgerlijke staat en huwelijksvoorwaarden</legend>
 
-                    <fieldset  id="groepvragen">
+                    <fieldset class="getrouwd-vraag">
                         <legend class="kopje">Was de overledene getrouwd of had de overledene een geregistreerde partner op het moment van overlijden?</legend>
                         
-                        <input type="radio" name="getrouwd" id="getrouwdnee" required>
+                        <input type="radio" name="getrouwd" id="getrouwdnee" value="nee" required>
                         <label for="getrouwdnee">Nee</label>
 
-                        <input type="radio" name="getrouwd" id="getrouwdja" required>
+                        <input type="radio" name="getrouwd" id="getrouwdja" value="ja" required>
                         <label for="getrouwdja">Ja</label>
                     </fieldset>
 
-                    <fieldset  id="groepvragen">
+                    <fieldset class="notariele-akte-vraag">
                         <legend class="kopje">Hadden de overledene en diens echtgenoot of geregistreerde partner huwelijkse of partnerschapsvoorwaarden laten vastleggen in een notariële akte?</legend>
                         
                         <input type="radio" name="notariële akte" id="notariële aktenee" required>
@@ -72,7 +72,7 @@
                         <label for="notariële akteja">Ja. Stuur een kopie van de akte mee met de aangifte.</label>
                     </fieldset>
 
-                    <fieldset  id="groepvragen">
+                    <fieldset class="verrekenbeding-vraag">
                         <legend class="kopje">Hadden de overledene en diens partner een finaal verrekenbeding?</legend>
 
                         <input type="radio" name="verrekenbeding" id="verrekenbedingnee">
@@ -80,19 +80,18 @@
 
                         <input type="radio" name="verrekenbeding" id="verrekenbedingja">
                         <label for="verrekenbedingja">Ja</label>
+
+                        <label for="datumvoorwaarden">Datum huwelijkse of partnerschapsvoorwaarden</label>
+                        <input type="date" id="datumvoorwaarden">
                     </fieldset>
-
-
-                    <label for="datumvoorwaarden">Datum huwelijkse of partnerschapsvoorwaarden</label>
-                    <input type="date" id="datumvoorwaarden">
 
                 </fieldset>
             </div>
 
-            <div class="groep">
-                <fieldset id="groepvragen">
+            <div class="groep groep-kinderen-afstammelingen">
+                <fieldset class="kinderen-afstammelingen">
                     <legend class="titel">Kinderen en afstammelingen</legend>
-                    <fieldset  id="groepvragen">
+                    <fieldset class="kinderen-vraag">
                         <legend class="kopje">Had de overledene kinderen?</legend>
 
                         <input type="radio" name="kinderen" id="kinderennee">
@@ -102,7 +101,7 @@
                         <label for="kinderenja">Ja</label>
                     </fieldset>
 
-                    <fieldset  id="groepvragen">
+                    <fieldset class="kinderenoverleden-vraag">
                         <legend class="kopje">Is 1 van deze kinderen eerder overleden dan de overledene voor wie u nu aangifte doet?</legend>
                         
                         <input type="radio" name="kindoverleden" id="kindoverledennee">
@@ -112,7 +111,7 @@
                         <label for="kindoverledenja">Ja</label>
                     </fieldset>
 
-                    <fieldset  id="groepvragen">
+                    <fieldset class="hadkind-kinderen-vraag">
                         <legend class="kopje">Had dit overleden kind zelf kinderen?</legend>
 
                         <input type="radio" name="hadkinderen" id="hadkindkinderennee">
@@ -124,10 +123,10 @@
                 </fieldset>
             </div>
 
-            <div class="groep">
-                <fieldset id="groepvragen">
+            <div class="groep groep-testament">
+                <fieldset class="testament">
                     <legend class="titel">Testament</legend>
-                    <fieldset id="groepvragen">
+                    <fieldset class="testament-vraag">
                         <legend class="kopje">Had de overledene een testament?</legend>
 
                         <input type="radio" name="testament" id="testamentnee">
@@ -137,7 +136,7 @@
                         <label for="testamentja">Ja</label>
                     </fieldset>
 
-                    <fieldset id="groepvragen">
+                    <fieldset class="testamentgegevens-vraag">
                         <label for="Protocolnummernotaris">Protocolnummer notaris</label>
                         <input type="number" id="Protocolnummernotaris" required >
 

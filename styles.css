@@ -20,6 +20,7 @@ header {
     padding: 5vw;
     border-radius: 8px;
 
+
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -30,7 +31,9 @@ header p{
     font-weight: bold;
 }
 
-.groep{
+
+/* Specifieke groepen voor extra styling indien gewenst */
+.groep {
     background-color: var(--secondary-color);
     margin: 5vw 0vw;
     padding: 2vw 2vw;
@@ -60,7 +63,20 @@ p{
     margin: 0.5vw;
 }
 
-#groepvragen {
+
+/* Fieldset layout: alle fieldsets krijgen dezelfde layout als voorheen */
+.overledene-gegevens,
+.burgerlijke-staat,
+.getrouwd-vraag,
+.notariele-akte-vraag,
+.verrekenbeding-vraag,
+.kinderen-afstammelingen,
+.kinderen-vraag,
+.kinderenoverleden-vraag,
+.hadkind-kinderen-vraag,
+.testament,
+.testament-vraag,
+.testamentgegevens-vraag {
     display: flex;
     flex-direction: column;
     margin-top: 2em;
@@ -133,4 +149,18 @@ button[type="submit"] {
 
 button[type="submit"]:hover {
     background-color: #e6b800; /* Darker yellow on hover */
+}
+
+/* progressive disclosure */
+/* divs hidden */
+.groep-kinderen-afstammelingen, .notariele-akte-vraag, .verrekenbeding-vraag, .groep-testament {
+    display: none;
+}
+
+.groep-burgerlijke-staat:has(input[value="nee"]:checked) + .groep-kinderen-afstammelingen{
+    display: block;
+}
+
+.getrouwd-vraag:has(input[value="ja"]:checked) ~ .notariele-akte-vraag{
+    display: block;
 }
