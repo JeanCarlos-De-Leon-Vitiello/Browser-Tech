@@ -14,6 +14,9 @@
 body{
     background-color: var(--NS-background);
     margin: 2vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 header {
@@ -32,32 +35,50 @@ header p{
     font-weight: bold;
 }
 
+main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form {
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 
 /* Specifieke groepen voor extra styling indien gewenst */
 .groep {
     background-color: var(--secondary-color);
     margin: 5vw 0vw;
     padding: 2vw 2vw;
+    width: 100%;
 }
 
 
-.titel{
+.titel {
     color: var(--header-color);
     font-size: 2em;
     font-weight: 1000;
     padding: 0vw;
-    margin: 0vw;
+    margin-bottom: 1em;
 }
 
-fieldset{
+fieldset {
     border: none;
     padding: 0vw;
     margin: 0vw;
+    width: 100%;
 }
 
-p{
+p {
     font-size: 1.5vw;
-    margin: 0.5vw;
+    margin: 0.5em;
 }
 
 
@@ -76,30 +97,45 @@ p{
 .testamentgegevens-vraag {
     display: flex;
     flex-direction: column;
-    margin-top: 2em;
+    /* margin-top: 2em; */
 }
 
 /* label/legend en input styling */
-.kopje{
+.kopje {
     color: var(--text-color);
     font-size: 18px;
 }
 
-label{
+label {
     color: var(--text-color);
-    font-size: 18px;
+    font-size: 1em;
+    width: 100%;
+    display: block;
+    margin-bottom: 0.5em;
 }
 
-input{
-    margin-bottom: 5vw;
+input {
+    margin-bottom: 2em;
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
 }
 
 input[type="text"], 
 input[type="number"],
 input[type="date"],
-input[type="email"]{
-    height: 10vw;
+input[type="email"] {
+    height: 3em;
     border-radius: 8px;
+    font-size: 1em;
+    width: 100%;
+    max-width: 100%;
+}
+
+input[type="date"] {
+    width: 12em;
+    min-width: 8em;
+    max-width: 100%;
 }
 
 /* bron: https://stackoverflow.com/questions/51945122/how-to-change-the-appearance-of-input-type-date-datepicker */
@@ -120,10 +156,11 @@ input[type="radio"] + label {
     justify-content: center;
     align-items: center;
     margin-bottom: 1em;
-    height: 15vw;
+    height: 3em;
     border-radius: 8px;
-
     cursor: pointer;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 input[type="radio"]:checked + label {
@@ -147,4 +184,37 @@ button[type="submit"] {
 button[type="submit"]:hover {
     background-color: #e6b800; /* Darker yellow on hover */
 }
+
+
+/* display none vragen*/
+.notariele-akte-vraag, .verrekenbeding-vraag, #notariele-file-upload, #datum-voorwaarden-file, .label-datum-voorwaarden-file,
+.kinderen-afstammelingen, .kinderenoverleden-vraag, .hadkind-kinderen-vraag,
+.testament {
+ display: none;
+}
+
+/* progressive disclosure 1B*/
+.getrouwd-vraag:has(input[value="ja"]:checked) + .notariele-akte-vraag {
+    display: block;
+}
+
+.burgerlijke-staat:has(input[name="getrouwd"][value="nee"]:checked) + .kinderen-afstammelingen,
+.burgerlijke-staat:has(input[name="notariele-akte"][value="nee"]:checked) + .kinderen-afstammelingen,
+.burgerlijke-staat:has(input[name="verrekenbeding"][value="nee"]:checked) + .kinderen-afstammelingen, 
+.burgerlijke-staat:has(input[name="verrekenbeding"][value="ja"]:checked) + .kinderen-afstammelingen {
+    display: block;
+}
+
+.notariele-akte-vraag:has(input[value="ja"]:checked) #datum-voorwaarden-file,
+.notariele-akte-vraag:has(input[value="ja"]:checked) #notariele-file-upload, 
+.notariele-akte-vraag:has(input[value="ja"]:checked) .label-datum-voorwaarden-file,
+.notariele-akte-vraag:has(input[value="ja"]:checked) + .verrekenbeding-vraag {
+    display: block;
+}
+
+/* progressive disclosure 1C*/
+.kinderen-afstammelingen:has(input[name="kinderen"][value="nee"]:checked) + .testament {
+    display: block;
+}
+
 

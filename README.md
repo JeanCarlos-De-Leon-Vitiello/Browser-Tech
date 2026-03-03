@@ -54,3 +54,27 @@ Tijdens de feedback sessie heb ik mijn werk laten zien aan andere studenten en k
 
 Ik heb ook het werk van andere gezien wat ook heel interessant is. Bij de datum input had ik gezien dat mila bijvoorbeeld daar 3 inputs van had gemaakt om zo de datum te selecteren. Maar uit de feeback bleek dat dat niet een heel goed idee was omdat het heel ingewikkeld is om het te laten werken want niet alle maanden hebben 31 dagen.
 
+## Week 2/ Dag 1
+
+**Wat heb ik vandaag gedaan:**
+
+**Hoelang duurde het:**
+
+
+**Wat heb ik geleerd:**
+
+
+**Wat ga ik morgen doen:**
+
+## Week 2/ Dag 2
+
+**Wat heb ik vandaag gedaan:**
+
+**Hoelang duurde het:**
+
+
+**Wat heb ik geleerd:**
+
+
+**Wat ga ik morgen doen:**
+
