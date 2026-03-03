@@ -57,24 +57,29 @@ Ik heb ook het werk van andere gezien wat ook heel interessant is. Bij de datum 
 ## Week 2/ Dag 1
 
 **Wat heb ik vandaag gedaan:**
+gister ben ik bezig geweest met het maken van de progressive disclosure wat mij uiteindelijk niet is gelukt. Ik heb de aanpassingen die ik heb gedaan verwijderd en de dag zonder progressie afgesloten. Om 15:00 ben ik de artikelen gaan lezen van de weekly geek. Mijn groepje had de radio button, check box en label. 
 
 **Hoelang duurde het:**
-
+Ik was 2 uur bezig met de progressive disclosure proberen te maken wat dus niet was gelukt.
 
 **Wat heb ik geleerd:**
-
+Ik heb geleerd hoe ik has kan gebruiken. Ook al is het niet gelukt voelt het alsof ik wat extra kennis heb kunnen bij winnen.
 
 **Wat ga ik morgen doen:**
+morgen ga ik door met het af maken van de progressive disclosure. En het presenteren van de artikelen en wat je ermee kan.
 
 ## Week 2/ Dag 2
 
 **Wat heb ik vandaag gedaan:**
+Vandaag heb ik de progressive disclosure afgemaakt. Het was lastig om te begrijpen maar door vragen te stellen lukte het uiteindelijk. Ik merkte dat ik nog even moet oefenen/lezen wat sommige selectoren doen. Ook merk ik dat ik vergeet om bijvoorbeeld de value te zetten bij een input. Ik heb ook vandaag bij de kickoff met mijn team de artikelen bekeken en deelgenomen aan de gezammelijke presentatie.
 
 **Hoelang duurde het:**
-
+Het duurde mij 3 uurtjes om de progressive disclosure af te krijgen.
 
 **Wat heb ik geleerd:**
+Ik heb geleerd hoe je name en value kan gebruiken om elementen te selecteren en daarmee een progressive disclosure maakt.
 
+**Wat ga ik volgende week doen:**
+Morgen ga ik bezig zijn met de tweede pattern zodat ik kan beginnen met valideren en de formulier zo af te ronden.
 
-**Wat ga ik morgen doen:**
-
+**weekly geek samenvatting**
