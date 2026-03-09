@@ -83,3 +83,25 @@ Ik heb geleerd hoe je name en value kan gebruiken om elementen te selecteren en 
 Morgen ga ik bezig zijn met de tweede pattern zodat ik kan beginnen met valideren en de formulier zo af te ronden.
 
 **weekly geek samenvatting**
+
+
+## Week 3/ Dag 1
+
+**Wat heb ik vandaag gedaan:**
+Ik ben vandaag gestart met validatie met HTML en CSS. Ik ben in HTML eerst begonnen met de vragen required te maken zodat je niet zomaar de formulier kan indiennen.
+
+Ik kwam erachter dat je het nog beter kan maken door met JS de required weg te halen en weer erop te zetten want anders blijft de vraag required ook al is het dislpay: none. Ik wil hiermee als ik nog tijd over heb mee aan de slag. Voor de informatie van de persoon zoals naam, tussenvoegsels en achternaam heb ik een pattern gebruikt wat ervoor zorgd dat je alleen letters met en zonder hoofdletters. Hierdoor kan de gebruiker geen cijfers invoeren. Ik heb ook een passende titel toegevoed die eronder komt als de gebruiker het formulier wil indienen maar nog niet goed is ingevuld.
+
+Voor de datum input heb ik een min en een max gebruikt om zo de datum te valideren. Bij de overlijdens datum mag dat 8 maanden na de overlijdensdatum zijn. Helaas is dat niet alleen mogelijk met HTML en CSS. Daarvoor is javascript voor nodig om te kunnen berekenen als de datum goed is. Dit is ook zo met de BSN (11 proef) om de bsn te berekenen.
+
+Heb ik met user invalid en valid gevalideerd. Ik heb de kleur van de border veranderd in beide gevallen zodat de user feedback krijg en direct de status kan zien.
+
+**Hoelang duurde het:**
+
+
+**Wat heb ik geleerd:**
+
+
+**Wat ga ik volgende week doen:**
+
+

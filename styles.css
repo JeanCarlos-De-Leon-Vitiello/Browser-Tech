@@ -9,6 +9,7 @@
     --header-color: #003082;
     --NS-geel: #ffc917;
     --NS-background: #ffffff;
+    --NS-border-color: #c4c5cb;
 }
 
 body{
@@ -20,18 +21,80 @@ body{
 }
 
 header {
-    background-color: var(--NS-geel);
-    padding: 5vw;
     border-radius: 8px;
 
-
+    width: 100%;
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
 }
 
+header nav {
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     width: 100%;
+     height: 7.1875rem;
+     a {
+        text-decoration: none;
+        color: var(--header-color);
+     }
+}
+
+header > div:nth-child(2) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    width: 100%;
+
+    background-color: var(--NS-geel);
+}
+
+header nav a:nth-of-type(1) svg {
+    width: 10vw;
+    height: fit-content;
+}
+
+header nav > div:nth-of-type(1) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+header nav > div:nth-of-type(1) {
+    gap: 0.5em;
+    a{
+        font-size: 1.125rem;
+        font-weight: 700;
+    }
+}
+
+header nav > div:nth-of-type(1) div{
+    gap: 1em;
+}
+
+header nav > div:nth-of-type(2) svg:nth-child(1)  {
+    width: 2.1875rem;
+    height: 2.1875rem;
+}
+
+header nav > div:nth-of-type(2) svg:nth-child(3)  {
+    width: 2.1875rem;
+    height: 2.1875rem;
+}
+
+header nav > div:nth-child(2) {
+    align-items: end;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
 header p{
-    font-size: 5vw;
+    font-size: 1vw;
     font-weight: bold;
 }
 
@@ -43,7 +106,7 @@ main {
 }
 
 form {
-    max-width: 600px;
+    max-width: 800px;
     width: 100%;
     margin: 0 auto;
     display: flex;
@@ -52,7 +115,6 @@ form {
 }
 
 
-/* Specifieke groepen voor extra styling indien gewenst */
 .groep {
     background-color: var(--secondary-color);
     margin: 5vw 0vw;
@@ -76,13 +138,13 @@ fieldset {
     width: 100%;
 }
 
-p {
+main p {
     font-size: 1.5vw;
     margin: 0.5em;
 }
 
 
-/* Fieldset layout: alle fieldsets krijgen dezelfde layout als voorheen */
+/* Fieldset layout: alle fieldsets krijgen dezelfde layout */
 .overledene-gegevens,
 .burgerlijke-staat,
 .getrouwd-vraag,
@@ -104,11 +166,13 @@ p {
 .kopje {
     color: var(--text-color);
     font-size: 18px;
+    font-weight: 300;
+    margin-bottom: 0.5em;
 }
 
 label {
     color: var(--text-color);
-    font-size: 1em;
+    font-size: 18px;
     width: 100%;
     display: block;
     margin-bottom: 0.5em;
@@ -123,16 +187,21 @@ input {
 
 input[type="text"], 
 input[type="number"],
-input[type="date"],
 input[type="email"] {
     height: 3em;
-    border-radius: 8px;
+    border: 1px  solid var(--NS-border-color);
+    border-radius: 6px;
     font-size: 1em;
     width: 100%;
     max-width: 100%;
 }
 
 input[type="date"] {
+    height: 3em;
+    border: 1px  solid var(--NS-border-color);
+    border-radius: 6px;
+    font-size: 1em;
+
     width: 12em;
     min-width: 8em;
     max-width: 100%;
@@ -151,7 +220,7 @@ input[type="radio"] {
 
 input[type="radio"] + label {
     color: black;
-    border: solid black;
+    border: 1px solid var(--NS-border-color);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -164,9 +233,8 @@ input[type="radio"] + label {
 }
 
 input[type="radio"]:checked + label {
-    color: var(--NS-geel);
     font-weight: 600;
-    border-color: #ffc917;
+    border-color: var(--text-color);
 }
 
 /* submit button styling */
@@ -215,6 +283,25 @@ button[type="submit"]:hover {
 /* progressive disclosure 1C*/
 .kinderen-afstammelingen:has(input[name="kinderen"][value="nee"]:checked) + .testament {
     display: block;
+}
+
+/* validatie */
+input:user-invalid{
+    border: 1px solid red
+}
+
+input:user-valid{
+    border: 1px solid green
+}
+
+/* eerste fieldset styling */
+form fieldset:nth-child(1) div{
+    display: flex;
+    gap: 1vw;
+}
+
+.tussenvoegsels {
+    width: 50%;
 }
 
 
