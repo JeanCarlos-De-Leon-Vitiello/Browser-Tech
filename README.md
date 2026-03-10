@@ -83,7 +83,7 @@ Ik heb geleerd hoe je name en value kan gebruiken om elementen te selecteren en 
 Morgen ga ik bezig zijn met de tweede pattern zodat ik kan beginnen met valideren en de formulier zo af te ronden.
 
 **weekly geek samenvatting**
-
+Tijdens de weekly geek moest mijn groepje artikelen lezen over wat je nodig hebt om een radio button na te maken zonde de input element te gebruiken.
 
 ## Week 3/ Dag 1
 
@@ -95,13 +95,16 @@ Ik kwam erachter dat je het nog beter kan maken door met JS de required weg te h
 Voor de datum input heb ik een min en een max gebruikt om zo de datum te valideren. Bij de overlijdens datum mag dat 8 maanden na de overlijdensdatum zijn. Helaas is dat niet alleen mogelijk met HTML en CSS. Daarvoor is javascript voor nodig om te kunnen berekenen als de datum goed is. Dit is ook zo met de BSN (11 proef) om de bsn te berekenen.
 
 Heb ik met user invalid en valid gevalideerd. Ik heb de kleur van de border veranderd in beide gevallen zodat de user feedback krijg en direct de status kan zien.
+![css validatie](./Image/css%20validatie.png)
 
 **Hoelang duurde het:**
-
+Ik was 2 uurtjes bezig met stylen en 1 uur met de validatie die ik tot nu toe heb.
 
 **Wat heb ik geleerd:**
+Ik heb geleerd hoe je patterns kan maken en dat kan toepassen bij verschillende inputs. Ook heb ik geleerd wat wel en niet kan met alleen html en css zoals de datum validatie.
 
+**Wat ga ik volgende keer doen:**
+Ik wil de header styling goed afmaken zodat het echt om die van de NS lijkt. Naast dat wil ik de tweede pattern gaan maken zodat mijn website voldoet aan de eisen van de eindopdracht. Als ik klaar ben met dat wil ik met javascript gaan proberen te valideren.
 
-**Wat ga ik volgende week doen:**
-
+**weekly geek samenvatting**
 
