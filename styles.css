@@ -305,7 +305,12 @@ button[type="submit"]:hover {
 }
 
 /* progressive disclosure 1C*/
-.kinderen-afstammelingen:has(input[name="kinderen"][value="ja"]:checked) + .testament {
+.kinderen-vraag:has(input[name="kinderen"][value="ja"]:checked) + .kinderenoverleden-vraag,
+.kinderenoverleden-vraag:has(input[name="kind-overleden"][value="ja"]:checked) + .hadkind-kinderen-vraag,
+.kinderen-afstammelingen:has(input[name="hadkind-kinderen"][value="ja"]:checked) + .testament,
+.kinderen-afstammelingen:has(input[name="hadkind-kinderen"][value="nee"]:checked) + .testament,
+.kinderen-afstammelingen:has(input[name="kind-overleden"][value="nee"]:checked) + .testament,
+.kinderen-afstammelingen:has(input[name="kinderen"][value="nee"]:checked) + .testament {
     display: block;
 }
 

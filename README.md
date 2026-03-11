@@ -108,3 +108,12 @@ Ik wil de header styling goed afmaken zodat het echt om die van de NS lijkt. Naa
 
 **weekly geek samenvatting**
 
+## Week 3/ Dag 1
+
+**Wat heb ik vandaag gedaan:**
+
+**Hoelang duurde het:**
+
+**Wat heb ik geleerd:**
+
+**Wat ga ik volgende keer doen:**
