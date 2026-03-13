@@ -65,13 +65,13 @@
         </div>
     </header>
     <main>
-        <form action="" novalidate>
+        <form action="">
             <fieldset class="overledene-gegevens">
                     <!-- <h1>Gegevens van de overledene</h1> -->
 
                     <legend class="titel">Gegevens van de overledene</legend>
 
-                    <div>
+                    <div class="naam-div">
                         <label for="voorletters">Voorletters
                             <input type="text" id="voorletters" pattern="[A-Za-z.]+" title="Volg het volgende patroon: A.M." required >
                             <p class="error-melding">Volg het volgende patroon: A.M.</p>
@@ -110,31 +110,40 @@
                     <fieldset class="getrouwd-vraag">
                         <legend class="kopje">Was de overledene getrouwd of had de overledene een geregistreerde partner op het moment van overlijden?</legend>
                         
-                        <label for="getrouwd-nee">Nee
-                            <input type="radio" name="getrouwd" id="getrouwd-nee" value="nee" required>
-                        </label>
+                        <div class="ja-nee-vragen">
+                            <label for="getrouwd-nee">Nee
+                                <input type="radio" name="getrouwd" id="getrouwd-nee" value="nee" required>
+                            </label>
 
-                        <label for="getrouwd-ja">Ja
-                            <input type="radio" name="getrouwd" id="getrouwd-ja" value="ja" required>
-                        </label>
+                            <label for="getrouwd-ja">Ja
+                                <input type="radio" name="getrouwd" id="getrouwd-ja" value="ja" required>
+                            </label>
+                        </div>    
                         <p class="error-melding">Maak een keuze.</p>
+
                     </fieldset>
 
                     <fieldset class="notariele-akte-vraag">
                         <legend class="kopje">Hadden de overledene en diens echtgenoot of geregistreerde partner huwelijkse of partnerschapsvoorwaarden laten vastleggen in een notariële akte?</legend>
                         
-                        <label for="notariele-akte-nee">Nee
-                            <input type="radio" name="notariele-akte" id="notariele-akte-nee" value="nee" required>
-                        </label>
-                        
-                        <label for="notariele-akte-ja">Ja. Stuur een kopie van de akte mee met de aangifte.
-                            <input type="radio" name="notariele-akte" id="notariele-akte-ja" value="ja" required>
-                        </label>
+                        <div class="ja-nee-vragen">
+                            <label for="notariele-akte-nee">Nee
+                                <input type="radio" name="notariele-akte" id="notariele-akte-nee" value="nee" required>
+                            </label>
+                            
+                            <label for="notariele-akte-ja">Ja. Stuur een kopie van de akte mee met de aangifte.
+                                <input type="radio" name="notariele-akte" id="notariele-akte-ja" value="ja" required>
+                            </label>
+                        </div>
                         <p class="error-melding">Maak een keuze.</p>
 
-                        <label for="notariele-file-upload">Upload notariële akte
+                        <label class="file" for="notariele-file-upload">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="87" height="100" viewBox="0 0 87 100" fill="none">
+                            <path d="M86.9372 70.7317C86.9563 70.211 86.8927 69.6906 86.7487 69.1902L77.082 39.922C76.7616 38.951 76.1467 38.1064 75.3244 37.5076C74.5021 36.9088 73.514 36.5861 72.5 36.5854H53.1667V46.3415H69.0152L77.0723 70.7317H9.92767L17.9848 46.3415H33.8333V36.5854H14.5C13.486 36.5861 12.4979 36.9088 11.6756 37.5076C10.8533 38.1064 10.2384 38.951 9.918 39.922L0.251334 69.1902C0.107333 69.6906 0.0436935 70.211 0.0628334 70.7317C5.40167e-08 70.7317 0 95.122 0 95.122C0 96.4157 0.509225 97.6564 1.41565 98.5713C2.32208 99.4861 3.55145 100 4.83333 100H82.1667C83.4485 100 84.6779 99.4861 85.5844 98.5713C86.4908 97.6564 87 96.4157 87 95.122C87 95.122 87 70.7317 86.9372 70.7317ZM62.8333 31.239C64.0852 31.239 65.337 30.7756 66.2505 29.8585C67.1566 28.9438 67.6656 27.7032 67.6656 26.4098C67.6656 25.1163 67.1566 23.8757 66.2505 22.961L43.5 0L20.7495 22.961C19.8434 23.8757 19.3344 25.1163 19.3344 26.4098C19.3344 27.7032 19.8434 28.9438 20.7495 29.8585C21.663 30.7805 22.9148 31.239 24.1667 31.239C25.4185 31.239 26.6703 30.7805 27.5838 29.8585L38.6667 18.6732V51.2195C38.6667 52.5133 39.1759 53.754 40.0823 54.6688C40.9887 55.5836 42.2181 56.0976 43.5 56.0976C44.7819 56.0976 46.0113 55.5836 46.9177 54.6688C47.8241 53.754 48.3333 52.5133 48.3333 51.2195V18.6732L59.4162 29.8585C60.3302 30.7555 61.5585 31.2517 62.8333 31.239Z" fill="black"/>
+                            </svg>Upload notariële akte
                             <input type="file" name="notariele-file" id="notariele-file-upload" required>
                         </label>
+                        <p class="error-melding">Upload een kopie van de akte</p>
 
                         <label for="datum-voorwaarden-file" class="label-datum-voorwaarden-file">Datum huwelijkse of partnerschapsvoorwaarden
                             <!-- Hier kan de datum niet in de toekomst liggen van de overlijdensdatum dus er moet een max datum op zitten -->
@@ -144,14 +153,16 @@
 
                     <fieldset class="verrekenbeding-vraag">
                         <legend class="kopje">Hadden de overledene en diens partner een finaal verrekenbeding?</legend>
+                        
+                        <div class="ja-nee-vragen">
+                            <label for="verrekenbeding-nee">Nee
+                                <input type="radio" name="verrekenbeding" id="verrekenbeding-nee" value="nee" required>
+                            </label>
 
-                        <label for="verrekenbeding-nee">Nee
-                            <input type="radio" name="verrekenbeding" id="verrekenbeding-nee" value="nee" required>
-                        </label>
-
-                        <label for="verrekenbeding-ja">Ja
-                            <input type="radio" name="verrekenbeding" id="verrekenbeding-ja" value="ja" required>
-                        </label>
+                            <label for="verrekenbeding-ja">Ja
+                                <input type="radio" name="verrekenbeding" id="verrekenbeding-ja" value="ja" required>
+                            </label>
+                        </div>
                         <p class="error-melding">Maak een keuze.</p>
 
                     </fieldset>
@@ -165,39 +176,45 @@
                     <fieldset class="kinderen-vraag">
                         <legend class="kopje">Had de overledene kinderen?</legend>
 
-                        <label for="kinderen-nee">Nee
-                            <input type="radio" name="kinderen" id="kinderen-nee" value="nee" required>
-                        </label>
+                        <div class="ja-nee-vragen">
+                            <label for="kinderen-nee">Nee
+                                <input type="radio" name="kinderen" id="kinderen-nee" value="nee" required>
+                            </label>
 
-                        <label for="kinderen-ja">Ja
-                            <input type="radio" name="kinderen" id="kinderen-ja" value="ja" required>
-                        </label>
+                            <label for="kinderen-ja">Ja
+                                <input type="radio" name="kinderen" id="kinderen-ja" value="ja" required>
+                            </label>
+                        </div>
                         <p class="error-melding">Maak een keuze.</p>
                     </fieldset>
 
                     <fieldset class="kinderenoverleden-vraag">
                         <legend class="kopje">Is 1 van deze kinderen eerder overleden dan de overledene voor wie u nu aangifte doet?</legend>
                         
-                        <label for="kind-overleden-nee">Nee
-                            <input type="radio" name="kind-overleden" id="kind-overleden-nee" value="nee" required>
-                        </label>
+                        <div class="ja-nee-vragen">
+                            <label for="kind-overleden-nee">Nee
+                                <input type="radio" name="kind-overleden" id="kind-overleden-nee" value="nee" required>
+                            </label>
 
-                        <label for="kind-overleden-ja">Ja
-                            <input type="radio" name="kind-overleden" id="kind-overleden-ja" value="ja" required>
-                        </label>
+                            <label for="kind-overleden-ja">Ja
+                                <input type="radio" name="kind-overleden" id="kind-overleden-ja" value="ja" required>
+                            </label>
+                        </div>
                         <p class="error-melding">Maak een keuze.</p>
                     </fieldset>
 
                     <fieldset class="hadkind-kinderen-vraag">
                         <legend class="kopje">Had dit overleden kind zelf kinderen?</legend>
 
-                        <label for="hadkind-kinderen-nee">Nee
-                            <input type="radio" name="hadkind-kinderen" id="hadkind-kinderen-nee" value="nee" required>
-                        </label>
+                        <div class="ja-nee-vragen">
+                            <label for="hadkind-kinderen-nee">Nee
+                                <input type="radio" name="hadkind-kinderen" id="hadkind-kinderen-nee" value="nee" required>
+                            </label>
 
-                        <label for="hadkind-kinderen-ja">Ja
-                            <input type="radio" name="hadkind-kinderen" id="hadkind-kinderen-ja" value="ja" required>
-                        </label>
+                            <label for="hadkind-kinderen-ja">Ja
+                                <input type="radio" name="hadkind-kinderen" id="hadkind-kinderen-ja" value="ja" required>
+                            </label>
+                        </div>
                         <p class="error-melding">Maak een keuze.</p>
                     </fieldset>
             </fieldset>
@@ -209,36 +226,42 @@
                     <fieldset class="testament-vraag">
                         <legend class="kopje">Had de overledene een testament?</legend>
 
-                        <label for="testament-nee">Nee
-                            <input type="radio" name="testament" id="testament-nee" value="nee" required>
-                        </label>
-                        
-                        <label for="testament-ja">Ja
-                            <input type="radio" name="testament" id="testament-ja" value="ja" required>
-                        </label>
+                        <div class="ja-nee-vragen">
+                            <label for="testament-nee">Nee
+                                <input type="radio" name="testament" id="testament-nee" value="nee" required>
+                            </label>
+                            
+                            <label for="testament-ja">Ja
+                                <input type="radio" name="testament" id="testament-ja" value="ja" required>
+                            </label>
+                        </div>
+
                         <p class="error-melding">Maak een keuze.</p>
                     </fieldset>
 
                     <fieldset class="testamentgegevens-vraag">
+                        <div class="naam-div">
+                            <label for="voorletters-notaris">Voorletters
+                                <input type="text" id="voorletters-notaris" pattern="[A-Za-z.]+" title="Volg het volgende patroon: A.M." required >
+                                <p class="error-melding">Volg het volgende patroon: A.M.</p>
+                            </label>
+
+                            <label for="tussenvoegsels-notaris">Tussenvoegsels
+                                <input class="tussenvoegsels" type="text" id="tussenvoegsels-notaris" pattern="[A-Za-z.]+" title="Aleen letters zijn toegestaan" required >
+                                <p class="error-melding">Alleen letters zijn toegestaan.</p>
+                            </label>
+
+                            <label for="achternaam-notaris">Achternaam
+                                <input type="text"  id="achternaam-notaris" pattern="[A-Za-z.]+" title="Aleen letters zijn toegestaan" required >
+                                <p class="error-melding">Alleen letters zijn toegestaan.</p>
+                            </label>
+                        </div>
+
                         <label for="protocolnummer-notaris">Protocolnummer notaris
                             <input type="number" id="protocolnummer-notaris" required >
                             <p class="error-melding">Voer een geldig protocolnummer in.</p>
                         </label>
-
-                        <label for="voorletters-notaris">Voorletters
-                            <input type="text" id="voorletters-notaris" pattern="[A-Za-z.]+" title="Volg het volgende patroon: A.M." required >
-                            <p class="error-melding">Volg het volgende patroon: A.M.</p>
-                        </label>
-
-                        <label for="tussenvoegsels-notaris">Tussenvoegsels
-                            <input class="tussenvoegsels" type="text" id="tussenvoegsels-notaris" pattern="[A-Za-z.]+" title="Aleen letters zijn toegestaan" required >
-                            <p class="error-melding">Alleen letters zijn toegestaan.</p>
-                        </label>
-
-                        <label for="achternaam-notaris">Achternaam
-                            <input type="text"  id="achternaam-notaris" pattern="[A-Za-z.]+" title="Aleen letters zijn toegestaan" required >
-                            <p class="error-melding">Alleen letters zijn toegestaan.</p>
-                        </label>
+                        
 
                         <label for="vestigingsplaats">Vestigingsplaats
                             <input type="text" id="vestigingsplaats" autocomplete="address-level2" required>

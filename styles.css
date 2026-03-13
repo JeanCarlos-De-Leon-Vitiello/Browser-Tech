@@ -187,6 +187,11 @@ main p {
     /* margin-top: 2em; */
 }
 
+.ja-nee-vragen{
+    display: flex;
+    gap: 1vw;
+}
+
 /* label/legend en input styling */
 .kopje {
     color: var(--text-color);
@@ -201,6 +206,11 @@ label {
     width: 100%;
     display: block;
     margin-bottom: 0.5em;
+}
+
+label:has(input) {
+    display: flex;
+    flex-direction: column;
 }
 
 input {
@@ -278,7 +288,7 @@ button[type="submit"]:hover {
 
 
 /* display none vragen*/
-.notariele-akte-vraag, .verrekenbeding-vraag, #notariele-file-upload, label[for="notariele-file-upload"], #datum-voorwaarden-file, .label-datum-voorwaarden-file,
+.notariele-akte-vraag, .verrekenbeding-vraag, .file, label[for="notariele-file-upload"], #datum-voorwaarden-file, .label-datum-voorwaarden-file,
 .kinderen-afstammelingen, .kinderenoverleden-vraag, .hadkind-kinderen-vraag,
 .testament, .testamentgegevens-vraag {
  display: none;
@@ -297,7 +307,7 @@ button[type="submit"]:hover {
 }
 
 .notariele-akte-vraag:has(input[value="ja"]:checked) #datum-voorwaarden-file,
-.notariele-akte-vraag:has(input[value="ja"]:checked) #notariele-file-upload, 
+.notariele-akte-vraag:has(input[value="ja"]:checked) .file, 
 .notariele-akte-vraag:has(input[value="ja"]:checked) label[for="notariele-file-upload"],
 .notariele-akte-vraag:has(input[value="ja"]:checked) .label-datum-voorwaarden-file,
 .notariele-akte-vraag:has(input[value="ja"]:checked) + .verrekenbeding-vraag {
@@ -320,6 +330,18 @@ button[type="submit"]:hover {
 }
 
 /* validatie */
+.error-melding {
+    display: none;
+    color: #d6001c;
+    font-size: 0.9rem;
+    margin: 0.25rem 0 0.75rem;
+}
+
+label:has(input:user-invalid) > .error-melding,
+fieldset:has(input:user-invalid) > .error-melding {
+    display: block;
+}
+
 input:user-invalid{
     border: 1px solid red
 }
@@ -328,19 +350,8 @@ input:user-valid{
     border: 1px solid green
 }
 
-.error-melding {
-    display: none;
-    color: #d6001c;
-    font-size: 0.9rem;
-    margin: 0.25rem 0 0.75rem;
-}
-
-.error-melding.is-visible {
-    display: block;
-}
-
 /* eerste fieldset styling */
-form fieldset:nth-child(1) div{
+.naam-div{
     display: flex;
     gap: 1vw;
 }
@@ -348,3 +359,25 @@ form fieldset:nth-child(1) div{
 .tussenvoegsels {
     width: 50%;
 }
+
+/* input file styling */
+#notariele-file-upload {
+    display: none;
+}
+
+.file {
+    border: 1px solid var(--NS-border-color);
+    width: fit-content;
+    height: fit-content;
+    padding: 2vw;
+    border-radius: 8px;
+    color: black;
+    
+
+    svg {
+        width: 2vw;
+        height: fit-content;
+        margin-right: 1vw;
+    }
+}
+
