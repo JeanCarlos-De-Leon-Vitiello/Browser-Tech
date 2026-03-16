@@ -72,70 +72,73 @@
                     <legend class="titel">Gegevens van de overledene</legend>
 
                     <div class="naam-div">
-                        <label for="voorletters">Voorletters
-                            <input type="text" id="voorletters" pattern="[A-Za-z.]+" title="Volg het volgende patroon: A.M." required >
-                            <p class="error-melding">Volg het volgende patroon: A.M.</p>
-                        </label>
-                        
+                        <div class="naam">
+                            <label for="voorletters">Voorletters
+                                <input type="text" id="voorletters" name="voorletters" pattern="[A-Za-zÀ-ÿ' \-]+" title="Volg het volgende patroon: A.M." aria-describedby="voorletter-error" required >
+                            </label>
+                            <p id="voorletter-error" class="error-melding" aria-live="polite">Volg het volgende patroon: A.M.</p>
+                        </div>
 
-                        <label class="tussenvoegsels" for="tussenvoegsels">Tussenvoegsels
-                            <input type="text" id="tussenvoegsels" pattern="[A-Za-z.]+" title="Aleen letters zijn toegestaan">
-                            <p class="error-melding">Alleen letters zijn toegestaan</p>
-                        </label>
-                        
+                        <div class="tussenvoegsels">
+                            <label for="tussenvoegsels">Tussenvoegsels
+                                <input type="text" id="tussenvoegsels" name="tussenvoegsels" pattern="[A-Za-zÀ-ÿ' \-]+" title="Aleen letters zijn toegestaan" aria-describedby="tussenvoegsels-error">
+                            </label>
+                            <p id="tussenvoegsels-error" class="error-melding" aria-live="polite">Alleen letters zijn toegestaan</p>
+                        </div>
                      
-                        <label for="achternaam">Achternaam
-                            <input type="text"  id="achternaam" pattern="[A-Za-z.]+" title="Alleen letters zijn toegestaan" required>
-                            <p class="error-melding">Alleen letters zijn toegestaan</p>
-                        </label>
-                        
+                        <div class="naam">
+                            <label for="achternaam">Achternaam
+                                <input type="text"  id="achternaam" name="achternaam" pattern="[A-Za-zÀ-ÿ' \-]+" title="Alleen letters zijn toegestaan" aria-describedby="achternaam-error" required>
+                            </label>
+                            <p id="achternaam-error" class="error-melding" aria-live="polite" >Alleen letters zijn toegestaan</p>
+                        </div>
                     </div>
                         <label for="bsn-overledene">Bsn overledene
                             <!-- 11 proef om de bsn te berekenen -->
-                            <input type="number" id="bsn-overledene" min="9" max="9" required >
-                            <p class="error-melding">Voer een geldig BSN in.</p>
+                            <input type="text" id="bsn-overledene" name="bsn-overledene" inputmode="numeric" pattern="[0-9]{9}" minlength="9" maxlength="9" aria-describedby="bsn-overledene-error" required >
                         </label>
+                        <p id="bsn-overledene-error" class="error-melding" aria-live="polite">Voer een geldig BSN in.</p>
 
                         <label for="overlijdensdatum">Overlijdensdatum
                             <!-- erfbelasting mag max to 8 maanden overlijden gedaan worden JS nodig -->
-                            <input type="date" id="overlijdensdatum" min="2026-01-01" max="2026-12-31" required>
-                            <p class="error-melding">Vul een overlijdensdatum in.</p>
+                            <input type="date" id="overlijdensdatum" name="overlijdensdatum" min="2026-01-01" max="2026-12-31" aria-describedby="overlijdensdatum-error" required>
                         </label>
+                        <p id="overlijdensdatum-error" class="error-melding" aria-live="polite">Vul een overlijdensdatum in.</p>
                 </fieldset>
             <!-- Progressive disclosure -->
 
             <fieldset class="burgerlijke-staat">
                     <legend class="titel">Burgerlijke staat en huwelijksvoorwaarden</legend>
 
-                    <fieldset class="getrouwd-vraag">
+                    <fieldset class="getrouwd-vraag" aria-describedby="getrouwd-hint">
                         <legend class="kopje">Was de overledene getrouwd of had de overledene een geregistreerde partner op het moment van overlijden?</legend>
                         
+                        <p id="getrouwd-hint" class="hint">Verplichte veld</p>
                         <div class="ja-nee-vragen">
                             <label for="getrouwd-nee">Nee
                                 <input type="radio" name="getrouwd" id="getrouwd-nee" value="nee" required>
                             </label>
 
                             <label for="getrouwd-ja">Ja
-                                <input type="radio" name="getrouwd" id="getrouwd-ja" value="ja" required>
+                                <input type="radio" name="getrouwd" id="getrouwd-ja" value="ja">
                             </label>
                         </div>    
-                        <p class="error-melding">Maak een keuze.</p>
 
                     </fieldset>
 
-                    <fieldset class="notariele-akte-vraag">
+                    <fieldset class="notariele-akte-vraag" aria-describedby="notariele-akte-hint">
                         <legend class="kopje">Hadden de overledene en diens echtgenoot of geregistreerde partner huwelijkse of partnerschapsvoorwaarden laten vastleggen in een notariële akte?</legend>
                         
+                        <p id="notariele-akte-hint" class="hint">Verplichte veld</p>                        
                         <div class="ja-nee-vragen">
                             <label for="notariele-akte-nee">Nee
                                 <input type="radio" name="notariele-akte" id="notariele-akte-nee" value="nee" required>
                             </label>
                             
-                            <label for="notariele-akte-ja">Ja. Stuur een kopie van de akte mee met de aangifte.
-                                <input type="radio" name="notariele-akte" id="notariele-akte-ja" value="ja" required>
+                            <label for="notariele-akte-ja">Ja
+                                <input type="radio" name="notariele-akte" id="notariele-akte-ja" value="ja">
                             </label>
                         </div>
-                        <p class="error-melding">Maak een keuze.</p>
 
                         <label class="file" for="notariele-file-upload">
                             <svg xmlns="http://www.w3.org/2000/svg" width="87" height="100" viewBox="0 0 87 100" fill="none">
@@ -151,19 +154,19 @@
                         </label>
                     </fieldset>
 
-                    <fieldset class="verrekenbeding-vraag">
+                    <fieldset class="verrekenbeding-vraag" aria-describedby="verrekenbeding-hint">
                         <legend class="kopje">Hadden de overledene en diens partner een finaal verrekenbeding?</legend>
-                        
+                       
+                        <p id="verrekenbeding-hint" class="hint">Verplichte veld</p>                
                         <div class="ja-nee-vragen">
                             <label for="verrekenbeding-nee">Nee
                                 <input type="radio" name="verrekenbeding" id="verrekenbeding-nee" value="nee" required>
                             </label>
 
                             <label for="verrekenbeding-ja">Ja
-                                <input type="radio" name="verrekenbeding" id="verrekenbeding-ja" value="ja" required>
+                                <input type="radio" name="verrekenbeding" id="verrekenbeding-ja" value="ja">
                             </label>
                         </div>
-                        <p class="error-melding">Maak een keuze.</p>
 
                     </fieldset>
 
@@ -173,49 +176,49 @@
             <fieldset class="kinderen-afstammelingen">
                     <legend class="titel">Kinderen en afstammelingen</legend>
                     
-                    <fieldset class="kinderen-vraag">
+                    <fieldset class="kinderen-vraag" aria-describedby="kinderen-hint">
                         <legend class="kopje">Had de overledene kinderen?</legend>
-
+                        
+                        <p id="kinderen-hint" class="hint">Verplichte veld</p>
                         <div class="ja-nee-vragen">
                             <label for="kinderen-nee">Nee
                                 <input type="radio" name="kinderen" id="kinderen-nee" value="nee" required>
                             </label>
 
                             <label for="kinderen-ja">Ja
-                                <input type="radio" name="kinderen" id="kinderen-ja" value="ja" required>
+                                <input type="radio" name="kinderen" id="kinderen-ja" value="ja">
                             </label>
                         </div>
-                        <p class="error-melding">Maak een keuze.</p>
                     </fieldset>
 
-                    <fieldset class="kinderenoverleden-vraag">
+                    <fieldset class="kinderenoverleden-vraag" aria-describedby="kind-overleden-hint">
                         <legend class="kopje">Is 1 van deze kinderen eerder overleden dan de overledene voor wie u nu aangifte doet?</legend>
                         
+                        <p id="kind-overleden-hint" class="hint">Verplichte veld</p>                     
                         <div class="ja-nee-vragen">
                             <label for="kind-overleden-nee">Nee
                                 <input type="radio" name="kind-overleden" id="kind-overleden-nee" value="nee" required>
                             </label>
 
                             <label for="kind-overleden-ja">Ja
-                                <input type="radio" name="kind-overleden" id="kind-overleden-ja" value="ja" required>
+                                <input type="radio" name="kind-overleden" id="kind-overleden-ja" value="ja">
                             </label>
                         </div>
-                        <p class="error-melding">Maak een keuze.</p>
                     </fieldset>
 
-                    <fieldset class="hadkind-kinderen-vraag">
+                    <fieldset class="hadkind-kinderen-vraag" aria-describedby="hadkind-kinderen-hint">
                         <legend class="kopje">Had dit overleden kind zelf kinderen?</legend>
-
+                        
+                        <p id="hadkind-kinderen-hint" class="hint">Verplichte veld</p>
                         <div class="ja-nee-vragen">
                             <label for="hadkind-kinderen-nee">Nee
                                 <input type="radio" name="hadkind-kinderen" id="hadkind-kinderen-nee" value="nee" required>
                             </label>
 
                             <label for="hadkind-kinderen-ja">Ja
-                                <input type="radio" name="hadkind-kinderen" id="hadkind-kinderen-ja" value="ja" required>
+                                <input type="radio" name="hadkind-kinderen" id="hadkind-kinderen-ja" value="ja">
                             </label>
                         </div>
-                        <p class="error-melding">Maak een keuze.</p>
                     </fieldset>
             </fieldset>
             
@@ -223,56 +226,128 @@
             <fieldset class="testament">
                     <legend class="titel">Testament</legend>
 
-                    <fieldset class="testament-vraag">
+                    <fieldset class="testament-vraag" aria-describedby="testament-hint">
                         <legend class="kopje">Had de overledene een testament?</legend>
-
+                        
+                        <p id="testament-hint" class="hint">Verplichte veld</p>
                         <div class="ja-nee-vragen">
                             <label for="testament-nee">Nee
                                 <input type="radio" name="testament" id="testament-nee" value="nee" required>
                             </label>
                             
                             <label for="testament-ja">Ja
-                                <input type="radio" name="testament" id="testament-ja" value="ja" required>
+                                <input type="radio" name="testament" id="testament-ja" value="ja">
                             </label>
                         </div>
-
-                        <p class="error-melding">Maak een keuze.</p>
+                        
                     </fieldset>
 
                     <fieldset class="testamentgegevens-vraag">
                         <div class="naam-div">
-                            <label for="voorletters-notaris">Voorletters
-                                <input type="text" id="voorletters-notaris" pattern="[A-Za-z.]+" title="Volg het volgende patroon: A.M." required >
-                                <p class="error-melding">Volg het volgende patroon: A.M.</p>
-                            </label>
+                            
+                            <div class="naam">
+                                <label for="voorletters-notaris">Voorletters
+                                    <input type="text" id="voorletters-notaris" name="voorletters-notaris" pattern="[A-Za-z.]+" title="Volg het volgende patroon: A.M." aria-describedby="voorletters-notaris-error" required >
+                                </label>
+                                <p id="voorletters-notaris-error" class="error-melding" aria-live="polite">Volg het volgende patroon: A.M.</p>
+                            </div>
 
-                            <label for="tussenvoegsels-notaris">Tussenvoegsels
-                                <input class="tussenvoegsels" type="text" id="tussenvoegsels-notaris" pattern="[A-Za-z.]+" title="Aleen letters zijn toegestaan" required >
-                                <p class="error-melding">Alleen letters zijn toegestaan.</p>
-                            </label>
+                            <div class="tussenvoegsels">
+                                <label for="tussenvoegsels-notaris">Tussenvoegsels
+                                    <input type="text" id="tussenvoegsels-notaris" name="tussenvoegsels-notaris" pattern="[A-Za-zÀ-ÿ' \-]+" title="Aleen letters zijn toegestaan" aria-describedby="tussenvoegsels-notaris-error" required >
+                                </label>
+                                <p id="tussenvoegsels-notaris-error" class="error-melding" aria-live="polite">Alleen letters zijn toegestaan.</p>
+                            </div>
+                            
+                            <div class="naam">
+                                <label for="achternaam-notaris">Achternaam
+                                    <input type="text"  id="achternaam-notaris" name="achternaam-notaris" pattern="[A-Za-zÀ-ÿ' \-]+" title="Aleen letters zijn toegestaan" aria-describedby="achternaam-notaris-error" required >
+                                </label>
+                                <p id="achternaam-notaris-error" class="error-melding" aria-live="polite">Alleen letters zijn toegestaan.</p>
+                            </div>
 
-                            <label for="achternaam-notaris">Achternaam
-                                <input type="text"  id="achternaam-notaris" pattern="[A-Za-z.]+" title="Aleen letters zijn toegestaan" required >
-                                <p class="error-melding">Alleen letters zijn toegestaan.</p>
-                            </label>
                         </div>
 
                         <label for="protocolnummer-notaris">Protocolnummer notaris
-                            <input type="number" id="protocolnummer-notaris" required >
-                            <p class="error-melding">Voer een geldig protocolnummer in.</p>
+                            <input type="number" id="protocolnummer-notaris" name="protocolnummer-notaris" aria-describedby="protocolnummer-notaris-error" required >
                         </label>
+                        <p id="protocolnummer-notaris-error" class="error-melding" aria-live="polite">Voer een geldig protocolnummer in.</p>
                         
 
                         <label for="vestigingsplaats">Vestigingsplaats
-                            <input type="text" id="vestigingsplaats" autocomplete="address-level2" required>
-                            <p class="error-melding">Vul een vestigingsplaats in.</p>
+                            <input type="text" id="vestigingsplaats" name="vestigingsplaats" autocomplete="address-level2" aria-describedby="vestigingsplaats-error" required>
                         </label>
+                        <p id="vestigingsplaats-error" class="error-melding" aria-live="polite">Vul een vestigingsplaats in.</p>
 
                         <label for="datum-testament">Datum van het testament of van de laatste wijziging
                             <!-- De laatste wijziging kan niet later zijn dan de overlijdens datum en eerder zijn dan de datum huwelijkse of partnerschapsvoorwaarden -->
-                            <input type="date" id="datum-testament" min="2026-01-01" max="2026-12-31" required>
-                            <p class="error-melding">Vul een geldige datum in.</p>
+                            <input type="date" id="datum-testament" name="datum-testament" min="2026-01-01" max="2026-12-31" aria-describedby="datum-testament-error" required>
                         </label>
+                        <p id="datum-testament-error" class="error-melding" aria-live="polite">Vul een geldige datum in.</p>
+                </fieldset>
+
+                <fieldset>
+                    <legend></legend>
+
+                    <fieldset>
+                        <legend class="titel">Verkrijgers</legend>
+
+                        <div>
+                            <label for="bsn-rsin">BSN/RSIN
+                                <input type="text" id="bsn-rsin" name="bsn-verkrijger" inputmode="numeric" pattern="[0-9]{9}" minlength="9" maxlength="9" title="Voer een BSN of RSIN in van 9 cijfers zonder spaties." aria-describedby="bsn-rsin-error" required>
+                            </label>
+                            <p id="bsn-rsin-error" class="error-melding" aria-live="polite">Voer een geldig BSN in.</p>
+                        </div>
+
+                        <label for="voorletter-verkrijger">Voorletters
+                            <input type="text" id="voorletter-verkrijger" name="voorletter-verkrijger" pattern="[A-Za-zÀ-ÿ' \-]+" title="Vul je voorletters in. volg het volgende patroon: A.M." aria-describedby="voorletter-verkrijger-error" required>
+                        </label>
+                        <p id="voorletter-verkrijger-error" class="error-melding" aria-live="polite">Volg het volgende patroon: A.M.</p>
+
+                        <label for="tussenvoegsels-verkrijger">Tussenvoegsels
+                            <input type="text" id="tussenvoegsels-verkrijger" name="tussenvoegsels-verkrijger" pattern="[A-Za-zÀ-ÿ' \-]+" title="Vul hier in dien van toepassing tussenvoegsels." aria-describedby="tussenvoegsels-verkrijger-error">
+                        </label>
+                        <p id="tussenvoegsels-verkrijger-error" class="error-melding" aria-live="polite">Alleen letters zijn toegestaan.</p>
+
+                        <label for="achternaam-verkrijger">Achternaam
+                            <input type="text" id="achternaam-verkrijger" name="achternaam-verkrijger" pattern="[A-Za-zÀ-ÿ' \-]+" title="Vul je achternaam in." aria-describedby="achternaam-verkrijger-error" required>
+                        </label>
+                        <p id="achternaam-verkrijger-error" class="error-melding" aria-live="polite">Alleen letters zijn toegestaan.</p>
+
+                    </fieldset>
+
+                    <fieldset aria-describedby="hele-vermogen-hint">
+                        <legend class="kopje">Krijgt deze verkrijger waarvoor u geen aangifte doet het hele
+                        vermogen?</legend>
+                        
+                        <p id="hele-vermogen-hint" class="hint">Verplichte veld</p>
+                        <div class="ja-nee-vragen">
+                            <label for="hele-vermogen-nee">Nee
+                                <input type="radio" name="hele-vermogen" id="hele-vermogen-nee" value="nee" required>
+                            </label>
+                            
+                            <label for="hele-vermogen-ja">Ja
+                                <input type="radio" name="hele-vermogen" id="hele-vermogen-ja" value="ja">
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset aria-describedby="wettelijk-erfdeel-hint">
+                        <legend class="kopje">Doet deze verkrijger een beroep op diens legitieme portie
+                        (wettelijke erfdeel)?</legend>
+
+                        <p id="wettelijk-erfdeel-hint" class="hint">Verplichte veld</p>
+                        <div class="ja-nee-vragen">
+                            <label for="wettelijk-erfdeel-nee">Nee
+                                <input type="radio" name="wettelijk-erfdeel" id="wettelijk-erfdeel-nee" value="nee" required>
+                            </label>
+                            
+                            <label for="wettelijk-erfdeel-ja">Ja
+                                <input type="radio" name="wettelijk-erfdeel" id="wettelijk-erfdeel-ja" value="ja">
+                            </label>
+                        </div>
+                    </fieldset>
+
                 </fieldset>
             
 

@@ -248,7 +248,11 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 /* stylen radio buttons */
 input[type="radio"] {
-    display: none;
+    position: absolute;
+    opacity: 0;
+    width: 1px;
+    height: 1px;
+    margin: 0;
 }
 
 label:has(input[type="radio"]) {
@@ -263,6 +267,11 @@ label:has(input[type="radio"]) {
     cursor: pointer;
     width: 100%;
     box-sizing: border-box;
+}
+
+label:has(input[type="radio"]:focus-visible) {
+    outline: 3px solid var(--header-color);
+    outline-offset: 2px;
 }
 
 label:has(input[type="radio"]:checked) {
@@ -337,8 +346,16 @@ button[type="submit"]:hover {
     margin: 0.25rem 0 0.75rem;
 }
 
-label:has(input:user-invalid) > .error-melding,
-fieldset:has(input:user-invalid) > .error-melding {
+.hint {
+    position: absolute;
+    opacity: 0;
+    width: 1px;
+    height: 1px;
+    margin: 0;
+}
+
+/* werkt vooral goed in safari */
+label:has(input:user-invalid) + .error-melding {
     display: block;
 }
 
@@ -354,6 +371,10 @@ input:user-valid{
 .naam-div{
     display: flex;
     gap: 1vw;
+}
+
+.naam {
+    width: 100%;
 }
 
 .tussenvoegsels {
@@ -380,4 +401,3 @@ input:user-valid{
         margin-right: 1vw;
     }
 }
-
