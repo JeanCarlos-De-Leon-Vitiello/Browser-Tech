@@ -22,16 +22,14 @@ function updateVerkrijgerNummers() {
 function verkrijgerErbij() {
   let kopie = verkrijger.content.cloneNode(true);
 
-  let inputsMetId = kopie.querySelectorAll("input[id]"); // zoekt alle inputs met dat id
-
-  let aantalVerkrijgers =
-    verkrijgerFieldset.querySelectorAll("#legend-verkrijger1, .legend-verkrijger2").length + 1;
+  let aantalVerkrijgers = verkrijgerFieldset.querySelectorAll("#legend-verkrijger1, .legend-verkrijger2").length + 1;
 
   kopie.querySelector(".legend-verkrijger2").textContent = `Verkrijger ${aantalVerkrijgers}`;
 
   let verkrijgerVerwijder = kopie.querySelector(".verkrijger-verwijderen");
   verkrijgerVerwijder.addEventListener("click", verwijderVerkrijger);
 
+  maakCloneUniek(kopie, aantalVerkrijgers);
   verkrijgerFieldset.insertBefore(kopie, verkrijgerToevoegen);
   updateVerkrijgerNummers();
 }
@@ -45,4 +43,42 @@ function verwijderVerkrijger(event) {
 
   verkrijgerBlok.remove();
   updateVerkrijgerNummers();
+}
+
+
+
+
+
+// Bronnen 
+// MDN attribute selectors: https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors
+// ChatGPT, OpenAI. Uitleg en begeleiding bij het uniek maken van HTML-attributen in geclone-de formulierblokken met JavaScript, specifiek voor het aanpassen van `id`, `for`/`htmlFor`, `name` en `aria-describedby`, zodat elke clone correct werkt. Gesprek geraadpleegd op 17 maart 2026.
+
+
+// maak elke clone attribute uniek
+function maakCloneUniek(kopie, aantalverkrijgers) {
+  let inputsMetId = kopie.querySelectorAll("input[id]");
+  inputsMetId.forEach(function(input) {
+    input.id = `${input.id}-${aantalverkrijgers}`;
+  });
+
+  let labels = kopie.querySelectorAll("label[for]");
+  labels.forEach(function(label) {
+    label.htmlFor = `${label.htmlFor}-${aantalverkrijgers}`;
+  });
+
+  let radios = kopie.querySelectorAll("input[type='radio']");
+  radios.forEach(function(radio){
+    radio.name = `${radio.name}-${aantalverkrijgers}`;
+  })
+
+  let inputDiscribedBy = kopie.querySelectorAll("[aria-describedby]");
+  inputDiscribedBy.forEach(function(discribe){
+    discribe.setAttribute("aria-describedby",`${discribe.getAttribute("aria-describedby")}-${aantalverkrijgers}`);
+
+  })
+
+  let foutmeldingen = kopie.querySelectorAll(".error-melding[id], .hint[id]");
+  foutmeldingen.forEach(function(foutmelding) {
+    foutmelding.id = `${foutmelding.id}-${aantalverkrijgers}`;
+  });
 }

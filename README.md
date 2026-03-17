@@ -163,7 +163,6 @@ bij invoeren van bsn een inputmode toevoegen.
 Javascript validatie.
 tweede pattern maken.
 
-
 **Feedback sessie:**
 Als feedback heb ik te horen gekregen dat ik nog te ver achter loop en dat ik meer gas moet geven met het valideren en de tweede pattern. Ik wil me daarom volgende week zo min mogelijk op styling gaan focussen maar meer op de criterias waar aan ik moet gaan voldoen. Ik heb te veel tijd in css gezet dan op broweser tech.
 
@@ -202,11 +201,20 @@ gebruik ik aria-describedby om het te koppelen.
 ## Week 4/ Dag 2
 
 **Wat heb ik vandaag gedaan:**
-- tweede pattern afgemaak met clone js
+- tweede pattern afgemaakt met clone js
 - een verwijder clone functie gemaakt. voor als de gebruiker een clone wilt verwijderen.
+- de attribute uniek gemaakt door het met js aan te passen.
+- validatie met js gedaan
 
 **Hoelang duurde het:**
+- 1 uur om de tweede pattern af te maken met clone JS.
+- 45 minuten om een functie te maken waarmee de gebruiker een clone kan verwijderen.
+- 30 minuten om de attributen uniek te maken met JavaScript.
+- 1 uur en 15 minuten om de validatie met JavaScript toe te voegen.
 
 **Wat heb ik geleerd:**
-
-
+- Ik heb geleerd hoe ik met JavaScript een onderdeel van een formulier kan clonen, zodat een gebruiker makkelijk meerdere verkrijgers kan toevoegen.
+- Ik heb ook geleerd hoe ik zo'n clone weer kan verwijderen met een aparte functie. 
+- Verder heb ik geleerd dat het belangrijk is om attributes uniek te maken wanneer je werkt met meerdere dezelfde onderdelen in een formulier. Als je dat niet doet, kunnen labels en inputs niet goed samenwerken. Ik merkte dat bij het clonen van de template.
+- Ook heb ik meer geoefend met validatie in JavaScript.
+- Ik heb kennis gemaakt met de template element in html
