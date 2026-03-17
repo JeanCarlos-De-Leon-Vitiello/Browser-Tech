@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Belasting</title>
     <link rel="stylesheet" href="styles.css">
-    <script defer src="main.js"></script>
+    <script defer src="verkrijger.js"></script>
+    <script defer src="voorletters.js"></script>
     <link rel="stylesheet" href="https://static-ns-nl-data.fep-p.cla.ns.nl/apps/nessie/fonts/1.0.1/fonts.css" />
 </head>
 <body>
@@ -74,7 +75,7 @@
                     <div class="naam-div">
                         <div class="naam">
                             <label for="voorletters">Voorletters
-                                <input type="text" id="voorletters" name="voorletters" pattern="[A-Za-zÀ-ÿ' \-]+" title="Volg het volgende patroon: A.M." aria-describedby="voorletter-error" required >
+                                <input class="voor-letters" type="text" id="voorletters" name="voorletters" pattern="[A-Za-zÀ-ÿ' \-]+" title="Volg het volgende patroon: A.M." aria-describedby="voorletter-error" required >
                             </label>
                             <p id="voorletter-error" class="error-melding" aria-live="polite">Volg het volgende patroon: A.M.</p>
                         </div>
@@ -246,7 +247,7 @@
                         <div class="naam-div">
                             
                             <div class="naam">
-                                <label for="voorletters-notaris">Voorletters
+                                <label class="voor-letters" for="voorletters-notaris">Voorletters
                                     <input type="text" id="voorletters-notaris" name="voorletters-notaris" pattern="[A-Za-z.]+" title="Volg het volgende patroon: A.M." aria-describedby="voorletters-notaris-error" required >
                                 </label>
                                 <p id="voorletters-notaris-error" class="error-melding" aria-live="polite">Volg het volgende patroon: A.M.</p>
@@ -286,74 +287,142 @@
                         <p id="datum-testament-error" class="error-melding" aria-live="polite">Vul een geldige datum in.</p>
                 </fieldset>
 
-                <fieldset>
-                    <legend></legend>
+                <fieldset class="verkrijger-fieldset">
+                    <legend class="titel">Verkrijgers</legend>
 
-                    <fieldset>
-                        <legend class="titel">Verkrijgers</legend>
+                         <fieldset>
 
-                        <div>
-                            <label for="bsn-rsin">BSN/RSIN
-                                <input type="text" id="bsn-rsin" name="bsn-verkrijger" inputmode="numeric" pattern="[0-9]{9}" minlength="9" maxlength="9" title="Voer een BSN of RSIN in van 9 cijfers zonder spaties." aria-describedby="bsn-rsin-error" required>
+                            <legend id="legend-verkrijger1" class="kopje">Verkrijgers 1</legend>
+
+                            <div>
+                                <label for="bsn-rsin">BSN/RSIN
+                                    <input type="text" id="bsn-rsin" name="bsn-verkrijger" inputmode="numeric" pattern="[0-9]{9}" minlength="9" maxlength="9" title="Voer een BSN of RSIN in van 9 cijfers zonder spaties." aria-describedby="bsn-rsin-error" required>
+                                </label>
+                                <p id="bsn-rsin-error" class="error-melding" aria-live="polite">Voer een geldig BSN in.</p>
+                            </div>
+
+                            <label for="voorletter-verkrijger">Voorletters
+                                <input class="voor-letters" type="text" id="voorletter-verkrijger" name="voorletter-verkrijger" pattern="[A-Za-zÀ-ÿ' \-]+" title="Vul je voorletters in. volg het volgende patroon: A.M." aria-describedby="voorletter-verkrijger-error" required>
                             </label>
-                            <p id="bsn-rsin-error" class="error-melding" aria-live="polite">Voer een geldig BSN in.</p>
-                        </div>
+                            <p id="voorletter-verkrijger-error" class="error-melding" aria-live="polite">Volg het volgende patroon: A.M.</p>
 
-                        <label for="voorletter-verkrijger">Voorletters
-                            <input type="text" id="voorletter-verkrijger" name="voorletter-verkrijger" pattern="[A-Za-zÀ-ÿ' \-]+" title="Vul je voorletters in. volg het volgende patroon: A.M." aria-describedby="voorletter-verkrijger-error" required>
-                        </label>
-                        <p id="voorletter-verkrijger-error" class="error-melding" aria-live="polite">Volg het volgende patroon: A.M.</p>
+                            <label for="tussenvoegsels-verkrijger">Tussenvoegsels
+                                <input type="text" id="tussenvoegsels-verkrijger" name="tussenvoegsels-verkrijger" pattern="[A-Za-zÀ-ÿ' \-]+" title="Vul hier in dien van toepassing tussenvoegsels." aria-describedby="tussenvoegsels-verkrijger-error">
+                            </label>
+                            <p id="tussenvoegsels-verkrijger-error" class="error-melding" aria-live="polite">Alleen letters zijn toegestaan.</p>
 
-                        <label for="tussenvoegsels-verkrijger">Tussenvoegsels
-                            <input type="text" id="tussenvoegsels-verkrijger" name="tussenvoegsels-verkrijger" pattern="[A-Za-zÀ-ÿ' \-]+" title="Vul hier in dien van toepassing tussenvoegsels." aria-describedby="tussenvoegsels-verkrijger-error">
-                        </label>
-                        <p id="tussenvoegsels-verkrijger-error" class="error-melding" aria-live="polite">Alleen letters zijn toegestaan.</p>
+                            <label for="achternaam-verkrijger">Achternaam
+                                <input type="text" id="achternaam-verkrijger" name="achternaam-verkrijger" pattern="[A-Za-zÀ-ÿ' \-]+" title="Vul je achternaam in." aria-describedby="achternaam-verkrijger-error" required>
+                            </label>
+                            <p id="achternaam-verkrijger-error" class="error-melding" aria-live="polite">Alleen letters zijn toegestaan.</p>
 
-                        <label for="achternaam-verkrijger">Achternaam
-                            <input type="text" id="achternaam-verkrijger" name="achternaam-verkrijger" pattern="[A-Za-zÀ-ÿ' \-]+" title="Vul je achternaam in." aria-describedby="achternaam-verkrijger-error" required>
-                        </label>
-                        <p id="achternaam-verkrijger-error" class="error-melding" aria-live="polite">Alleen letters zijn toegestaan.</p>
+                        </fieldset>
+
+                        <fieldset aria-describedby="hele-vermogen-hint">
+                            <legend class="kopje">Krijgt deze verkrijger waarvoor u geen aangifte doet het hele
+                            vermogen?</legend>
+                            
+                            <p id="hele-vermogen-hint" class="hint">Verplichte veld</p>
+                            <div class="ja-nee-vragen">
+                                <label for="hele-vermogen-nee">Nee
+                                    <input type="radio" name="hele-vermogen" id="hele-vermogen-nee" value="nee" required>
+                                </label>
+                                
+                                <label for="hele-vermogen-ja">Ja
+                                    <input type="radio" name="hele-vermogen" id="hele-vermogen-ja" value="ja">
+                                </label>
+                            </div>
+                        </fieldset>
+
+                        <fieldset aria-describedby="wettelijk-erfdeel-hint">
+                            <legend class="kopje">Doet deze verkrijger een beroep op diens legitieme portie
+                            (wettelijke erfdeel)?</legend>
+
+                            <p id="wettelijk-erfdeel-hint" class="hint">Verplichte veld</p>
+                            <div class="ja-nee-vragen">
+                                <label for="wettelijk-erfdeel-nee">Nee
+                                    <input type="radio" name="wettelijk-erfdeel" id="wettelijk-erfdeel-nee" value="nee" required>
+                                </label>
+                                
+                                <label for="wettelijk-erfdeel-ja">Ja
+                                    <input type="radio" name="wettelijk-erfdeel" id="wettelijk-erfdeel-ja" value="ja">
+                                </label>
+                            </div>
+                        </fieldset>
+                            <button type="button" class="verkrijger-toevoegen">Voeg verkrijger toe</button>
+                        
+
+                </fieldset>
+
+                <template>
+                    <div class="verkrijger-blok">
+                    <fieldset>
+
+                            <legend class="legend-verkrijger2">Verkrijgers 1</legend>
+
+                            <div>
+                                <label for="bsn-rsin">BSN/RSIN
+                                    <input type="text" id="bsn-rsin" name="bsn-verkrijger" inputmode="numeric" pattern="[0-9]{9}" minlength="9" maxlength="9" title="Voer een BSN of RSIN in van 9 cijfers zonder spaties." aria-describedby="bsn-rsin-error" required>
+                                </label>
+                                <p id="bsn-rsin-error" class="error-melding" aria-live="polite">Voer een geldig BSN in.</p>
+                            </div>
+
+                            <label for="voorletter-verkrijger">Voorletters
+                                <input class="voor-letters" type="text" id="voorletter-verkrijger" name="voorletter-verkrijger" pattern="[A-Za-zÀ-ÿ' \-]+" title="Vul je voorletters in. volg het volgende patroon: A.M." aria-describedby="voorletter-verkrijger-error" required>
+                            </label>
+                            <p id="voorletter-verkrijger-error" class="error-melding" aria-live="polite">Volg het volgende patroon: A.M.</p>
+
+                            <label for="tussenvoegsels-verkrijger">Tussenvoegsels
+                                <input type="text" id="tussenvoegsels-verkrijger" name="tussenvoegsels-verkrijger" pattern="[A-Za-zÀ-ÿ' \-]+" title="Vul hier in dien van toepassing tussenvoegsels." aria-describedby="tussenvoegsels-verkrijger-error">
+                            </label>
+                            <p id="tussenvoegsels-verkrijger-error" class="error-melding" aria-live="polite">Alleen letters zijn toegestaan.</p>
+
+                            <label for="achternaam-verkrijger">Achternaam
+                                <input type="text" id="achternaam-verkrijger" name="achternaam-verkrijger" pattern="[A-Za-zÀ-ÿ' \-]+" title="Vul je achternaam in." aria-describedby="achternaam-verkrijger-error" required>
+                            </label>
+                            <p id="achternaam-verkrijger-error" class="error-melding" aria-live="polite">Alleen letters zijn toegestaan.</p>
 
                     </fieldset>
 
                     <fieldset aria-describedby="hele-vermogen-hint">
-                        <legend class="kopje">Krijgt deze verkrijger waarvoor u geen aangifte doet het hele
-                        vermogen?</legend>
-                        
-                        <p id="hele-vermogen-hint" class="hint">Verplichte veld</p>
-                        <div class="ja-nee-vragen">
-                            <label for="hele-vermogen-nee">Nee
-                                <input type="radio" name="hele-vermogen" id="hele-vermogen-nee" value="nee" required>
-                            </label>
+                            <legend class="kopje">Krijgt deze verkrijger waarvoor u geen aangifte doet het hele
+                            vermogen?</legend>
                             
-                            <label for="hele-vermogen-ja">Ja
-                                <input type="radio" name="hele-vermogen" id="hele-vermogen-ja" value="ja">
-                            </label>
-                        </div>
+                            <p id="hele-vermogen-hint" class="hint">Verplichte veld</p>
+                            <div class="ja-nee-vragen">
+                                <label for="hele-vermogen-nee">Nee
+                                    <input type="radio" name="hele-vermogen" id="hele-vermogen-nee" value="nee" required>
+                                </label>
+                                
+                                <label for="hele-vermogen-ja">Ja
+                                    <input type="radio" name="hele-vermogen" id="hele-vermogen-ja" value="ja">
+                                </label>
+                            </div>
                     </fieldset>
 
                     <fieldset aria-describedby="wettelijk-erfdeel-hint">
-                        <legend class="kopje">Doet deze verkrijger een beroep op diens legitieme portie
-                        (wettelijke erfdeel)?</legend>
+                            <legend class="kopje">Doet deze verkrijger een beroep op diens legitieme portie
+                            (wettelijke erfdeel)?</legend>
 
-                        <p id="wettelijk-erfdeel-hint" class="hint">Verplichte veld</p>
-                        <div class="ja-nee-vragen">
-                            <label for="wettelijk-erfdeel-nee">Nee
-                                <input type="radio" name="wettelijk-erfdeel" id="wettelijk-erfdeel-nee" value="nee" required>
-                            </label>
-                            
-                            <label for="wettelijk-erfdeel-ja">Ja
-                                <input type="radio" name="wettelijk-erfdeel" id="wettelijk-erfdeel-ja" value="ja">
-                            </label>
-                        </div>
+                            <p id="wettelijk-erfdeel-hint" class="hint">Verplichte veld</p>
+                            <div class="ja-nee-vragen">
+                                <label for="wettelijk-erfdeel-nee">Nee
+                                    <input type="radio" name="wettelijk-erfdeel" id="wettelijk-erfdeel-nee" value="nee" required>
+                                </label>
+                                
+                                <label for="wettelijk-erfdeel-ja">Ja
+                                    <input type="radio" name="wettelijk-erfdeel" id="wettelijk-erfdeel-ja" value="ja">
+                                </label>
+                            </div>
                     </fieldset>
-
-                </fieldset>
+                        <button type="button" class="verkrijger-verwijderen">verkrijger verwijderen</button>
+                    </div>
+                </template>
             
 
             </fieldset>
 
-            <button type="submit">Aangifte indienen</button>
+            <button class="submit-button" type="submit">Aangifte indienen</button>
             
         </form>
     </main>

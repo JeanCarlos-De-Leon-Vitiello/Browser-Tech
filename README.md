@@ -202,6 +202,8 @@ gebruik ik aria-describedby om het te koppelen.
 ## Week 4/ Dag 2
 
 **Wat heb ik vandaag gedaan:**
+- tweede pattern afgemaak met clone js
+- een verwijder clone functie gemaakt. voor als de gebruiker een clone wilt verwijderen.
 
 **Hoelang duurde het:**
 

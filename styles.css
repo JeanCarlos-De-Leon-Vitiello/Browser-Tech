@@ -299,7 +299,7 @@ button[type="submit"]:hover {
 /* display none vragen*/
 .notariele-akte-vraag, .verrekenbeding-vraag, .file, label[for="notariele-file-upload"], #datum-voorwaarden-file, .label-datum-voorwaarden-file,
 .kinderen-afstammelingen, .kinderenoverleden-vraag, .hadkind-kinderen-vraag,
-.testament, .testamentgegevens-vraag {
+.testament, .testamentgegevens-vraag, .verkrijger-fieldset, .submit-button {
  display: none;
 }
 
@@ -334,9 +334,18 @@ button[type="submit"]:hover {
 }
 
 /* progressive disclosure 1D*/
-.testament-vraag:has(input[name="testament"][value="ja"]:checked) + .testamentgegevens-vraag {
+.testament-vraag:has(input[name="testament"][value="ja"]:checked) + .testamentgegevens-vraag,
+.testament:has(input[name="testament"][value="ja"]:checked) .verkrijger-fieldset,
+.testament:has(input[name="testament"][value="nee"]:checked) .verkrijger-fieldset,
+.testament:has(input[name="testament"][value="ja"]:checked) + .submit-button,
+.testament:has(input[name="testament"][value="nee"]:checked) + .submit-button {
     display: block;
 }
+
+
+
+
+
 
 /* validatie */
 .error-melding {
@@ -401,3 +410,6 @@ input:user-valid{
         margin-right: 1vw;
     }
 }
+
+/* verkrijger toevoegen button */
+
