@@ -51,6 +51,11 @@ Tijdens de feedback sessie heb ik mijn werk laten zien aan andere studenten en k
 
 Ik heb ook het werk van andere gezien wat ook heel interessant is. Bij de datum input had ik gezien dat mila bijvoorbeeld daar 3 inputs van had gemaakt om zo de datum te selecteren. Maar uit de feeback bleek dat dat niet een heel goed idee was omdat het heel ingewikkeld is om het te laten werken want niet alle maanden hebben 31 dagen.
 
+**week 1 verslag**
+In de eerste week van sprint 2 ben ik begonnen met het maken van mijn formulier voor Browser Tech. Tijdens de kickoff kreeg ik uitleg over het vak, de eindopdracht en de eisen waar mijn project aan moest voldoen. Daarna ben ik gestart met het coderen van de HTML van mijn formulier. Ik merkte al snel dat het lastig werd, omdat ik veel dezelfde elementen zoals input, fieldset en label moest gebruiken. Toch is het mij gelukt om een groot deel van het formulier op te bouwen. Daarna ben ik begonnen met het stylen van de eerste pattern in de NS-huisstijl.
+
+Tijdens dit proces heb ik geleerd hoe een formulier is opgebouwd en hoe je verschillende HTML-elementen en attributen kunt gebruiken zoals name, for, value en id. Ook heb ik gemerkt dat het stylen van een legend best moeilijk is. Tijdens de feedbacksessie kreeg ik handige tips, zoals het beter gebruiken van id’s en namen, het codereren in het Engels en het verbeteren van de breedtes van inputs. Deze feedback helpt mij om mijn formulier later nog duidelijker en beter te maken.
+
 ## Week 2/ Dag 1
 
 **Wat heb ik vandaag gedaan:**
@@ -103,6 +108,15 @@ Tijdens de feedback sessie heb ik mijn werk laten zien aan andere studenten en k
 - input number voor de bsn kan goed werken maar je kan nog wel e intoetsen. de pijltjes rechts bij de input zou je ook weg kunne halen.
 - Error messages uit de label halen en met aria descibedby koppelen aan de label/input
 
+**week 2 verslag**
+In week 2 heb ik gewerkt aan de progressive disclosure van mijn formulier. Op dag 1 lukte het mij nog niet om dit goed werkend te krijgen. Ik ben daar ongeveer 2 uur mee bezig geweest, maar uiteindelijk heb ik mijn aanpassingen verwijderd. Toch heb ik er wel iets van geleerd, namelijk hoe ik :has() kan gebruiken. Later op de dag ben ik verder gegaan met de artikelen van de weekly geek, samen met mijn groepje. Wij hadden de onderwerpen radio button, checkbox en label.
+
+Op dag 2 is het mij wel gelukt om de progressive disclosure af te maken. Door vragen te stellen en beter te kijken naar de selectoren begon ik het beter te begrijpen. Ik heb geleerd hoe je name en value kunt gebruiken om elementen te selecteren en op basis daarvan onderdelen van een formulier te tonen of te verbergen. 
+
+tijdens de weekly geek heb ik geleerd dat je met ARIA en JavaScript zelf checkboxen en radiobuttons kunt namaken, maar dat gewone HTML-elementen vaak handiger zijn omdat die al veel functionaliteit en toegankelijkheid hebben. 
+
+Tijdens de feedbacksessie kreeg ik daarnaast tips over mijn BSN-input en over het beter koppelen van foutmeldingen met aria-describedby. Deze feedback hielp mij om mijn formulier verder te verbeteren.
+
 ## Week 3/ Dag 1
 
 **Wat heb ik vandaag gedaan:**
@@ -124,15 +138,15 @@ Ik heb geleerd hoe je patterns kan maken en dat kan toepassen bij verschillende 
 **Wat ga ik volgende week doen:**
 Ik wil de header styling goed afmaken zodat het echt op die van de NS lijkt. Naast dat wil ik de tweede pattern gaan maken zodat mijn website voldoet aan de eisen van de eindopdracht. Als ik klaar ben met dat wil ik met javascript gaan proberen te valideren.
 
-**weekly geek samenvatting**
+**weekly geek samenvatting: what happen to text input**
+Ik vond deze video interessant omdat hij op een grappige manier uitlegt dat webdesign niet altijd beter wordt als je dingen verandert. Soms willen designers iets te graag vernieuwen terwijl het oude eigenlijk al gewoon goed werkt. Vooral het voorbeeld van links zonder streep eronder en inputvelden die niet meer duidelijk op invoervelden lijken vond ik een goed punt. Daardoor snap je goed dat iets er misschien mooier uitziet, maar dat het voor de gebruiker juist lastiger wordt om te begrijpen.
+
+Mijn mening over de video is dat ik het wel eens ben met de schrijver. Ik vind ook dat duidelijkheid belangrijker is dan iets er alleen modern of anders uit laten zien. Als gebruiker wil je gewoon meteen snappen hoe iets werkt. Deze video laat goed zien dat een goed ontwerp niet alleen mooi moet zijn maar vooral handig en duidelijk voor de gebruiker.
 
 ## Week 3/ Dag 1
 
 **Wat heb ik vandaag gedaan:**
 Vandaag ben ik verder gegaan met het afmaken van de header en de validatie met css verder verbeteren. ik heb nu een p met een class error die op display block springt als de user een invalid input geeft. Dit doe ik omdat ik niet pas aan het einde de error melding wil geven maar direct na dat de gebruiker van de input veld af gaat zodat hij het kan verbeteren voor dat hij door gaat.
-
-**Hoelang duurde het:**
-
 
 **Wat heb ik geleerd:**
 Ik heb geleerd dat het beter is om een error message zoals ik het heb buiten de p te zetten omdat het beter is voor screenreaders om te lezen.
@@ -165,6 +179,11 @@ tweede pattern maken.
 
 **Feedback sessie:**
 Als feedback heb ik te horen gekregen dat ik nog te ver achter loop en dat ik meer gas moet geven met het valideren en de tweede pattern. Ik wil me daarom volgende week zo min mogelijk op styling gaan focussen maar meer op de criterias waar aan ik moet gaan voldoen. Ik heb te veel tijd in css gezet dan op broweser tech.
+
+**Week 3 verslag**
+In week 3 ben ik verder gegaan met de validatie en styling van mijn formulier. Ik ben begonnen met validatie in HTML en CSS door velden required te maken en patterns toe te voegen, zodat gebruikers alleen de juiste gegevens kunnen invullen. Ook heb ik gewerkt met min en max bij datums en met visuele feedback door de randen van inputs aan te passen bij een geldige of ongeldige invoer. Tijdens dit proces heb ik geleerd dat je met HTML en CSS al veel kan op het gebied van validatie maar dat je voor ingewikkeldere controles, zoals datumvergelijkingen en BSN-validatie JavaScript nodig hebt.
+
+Daarnaast heb ik de header verder verbeterd en foutmeldingen duidelijker gemaakt door ze direct zichtbaar te laten worden wanneer een gebruiker een fout maakt. Ik leerde ook dat foutmeldingen beter buiten een label kunnen staan en met aria-describedby gekoppeld moeten worden voor screenreaders. Verder heb ik de layout aangepast door de ja/nee-vragen naast elkaar te zetten in de stijl van NS. Wel merkte ik dat ik te veel tijd had besteed aan styling, terwijl ik eigenlijk meer had moeten focussen op de belangrijkste functionaliteiten zoals validatie en de tweede pattern. De feedbacksessie maakte dat extra duidelijk en heeft mij geholpen om mijn prioriteiten beter te stellen.
 
 
 ## Week 4/ Dag 1
@@ -218,3 +237,30 @@ gebruik ik aria-describedby om het te koppelen.
 - Verder heb ik geleerd dat het belangrijk is om attributes uniek te maken wanneer je werkt met meerdere dezelfde onderdelen in een formulier. Als je dat niet doet, kunnen labels en inputs niet goed samenwerken. Ik merkte dat bij het clonen van de template.
 - Ook heb ik meer geoefend met validatie in JavaScript.
 - Ik heb kennis gemaakt met de template element in html
+
+**Eind verslag**
+In week 4 heb ik mijn eindresultaat verder afgemaakt. Mijn uiteindelijke resultaat is een formulier dat is gebaseerd op de stijl van de NS website. Ik heb gewerkt aan de HTML, CSS en JavaScript. In de code heb ik validatie toegevoegd, progressive disclosure gebruikt en een tweede pattern gemaakt waarbij de gebruiker met JavaScript extra verkrijgers kan toevoegen en verwijderen.
+
+Wat goed ging, is dat het mij uiteindelijk gelukt is om de tweede pattern werkend te krijgen met clone JavaScript. Ook lukte het om foutmeldingen beter te koppelen met aria-describedby en om validatie duidelijker te maken voor de gebruiker. 
+
+Wat ik lastig vond was het overzicht houden in zo’n groot formulier. Vooral het werken met veel dezelfde elementen, clones en unieke attributes was soms best ingewikkeld. Waar ik het meest trots op ben, is dat ik uiteindelijk een werkend formulier heb gemaakt waarin je extra verkrijgers kunt toevoegen en verwijderen.
+
+Ik heb ook dingen geprobeerd die eerst niet lukten. Een voorbeeld daarvan is de progressive disclosure, waar ik in het begin niet uitkwam. Ook heb ik gemerkt dat ik soms te veel tijd stopte in styling terwijl ik beter eerst de belangrijkste functionaliteiten kon afmaken. Dat was voor mij een belangrijk leerpunt. Ik heb hierdoor geleerd dat CSS heel handig is voor layout, styling en simpele validatie, maar dat je voor complexere dingen zoals dynamische velden, clones en uitgebreidere validatie echt JavaScript nodig hebt. CSS is dus krachtig, maar niet genoeg voor alles.
+
+## Bronnen
+
+- NS fonts: https://static-ns-nl-data.fep-p.cla.ns.nl/apps/nessie/fonts/1.0.1/fonts.css
+- NS website: https://www.ns.nl/
+- Stack Overflow, datum input icoon aanpassen: https://stackoverflow.com/questions/51945122/how-to-change-the-appearance-of-input-type-date-datepicker
+- MDN, String.replace(): https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace
+- MDN, regex character classes: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes
+- MDN, String.split(): https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split
+- MDN, Array.map(): https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map
+- MDN, HTMLInputElement.value: https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/value
+- MDN, template element: https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/template
+- MDN, cloneNode(): https://developer.mozilla.org/en-US/docs/Web/API/Node/cloneNode
+- W3Schools, template tag: https://www.w3schools.com/tags/tag_template.asp
+- MDN, Element.closest(): https://developer.mozilla.org/en-US/docs/Web/API/Element/closest
+- MDN, Element.remove(): https://developer.mozilla.org/en-US/docs/Web/API/Element/remove
+- MDN, CSS attribute selectors: https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors
+- ChatGPT, OpenAI. Uitleg en begeleiding bij het uniek maken van HTML-attributen in geclone-de formulierblokken met JavaScript, geraadpleegd op 17 maart 2026.
